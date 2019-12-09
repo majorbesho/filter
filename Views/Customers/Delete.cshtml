@@ -1,0 +1,384 @@
+﻿@model EdgeMobile.Models.Customer
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Branch.BranchName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Branch.BranchName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerType.CustomerSupplierTypeCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerType.CustomerSupplierTypeCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DefCurrency.CurrencyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DefCurrency.CurrencyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DefLocation.LocationName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DefLocation.LocationName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MarketingDelegate.DelegateCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MarketingDelegate.DelegateCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerSupplierCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerSupplierCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerSupplierName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerSupplierName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerSupplierNameEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerSupplierNameEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApCustomerSupplierCategoryID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApCustomerSupplierCategoryID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GlAccountID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GlAccountID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GlSubAccountID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GlSubAccountID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DealingStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DealingStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BusinessName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BusinessName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.POBox)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.POBox)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostalCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostalCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecordTrading)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecordTrading)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telephone1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telephone2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telephone3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telephone3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fax)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fax)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ResponsibleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ResponsibleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasCreditLimit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasCreditLimit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditLimit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditLimit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InitialCredit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InitialCredit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApPaymentPeriodID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApPaymentPeriodID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApCustomerSupplierGroupID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApCustomerSupplierGroupID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerSupplierFlag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerSupplierFlag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocalDebit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocalDebit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocalCredit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocalCredit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApDelegateID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApDelegateID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApDelegateIDCollection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApDelegateIDCollection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NotificationValueCreditLimit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotificationValueCreditLimit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArCreditTypeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArCreditTypeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApDiscountID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApDiscountID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditPeriod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditPeriod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SellingPriceType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SellingPriceType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentMethod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentMethod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerSupplierType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerSupplierType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecordOwnerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecordOwnerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RowVersionNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RowVersionNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Logn_line)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logn_line)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Latit_Line)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Latit_Line)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

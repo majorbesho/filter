@@ -1,0 +1,112 @@
+﻿@model EdgeMobile.Models.GlCashVoucherCash
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>GlCashVoucherCash</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApCustomerSupplier.CustomerSupplierCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApCustomerSupplier.CustomerSupplierCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApDelegate.DelegateCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApDelegate.DelegateCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CashVoucherSerial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CashVoucherSerial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CashVoucherDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CashVoucherDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CashVouchertype)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CashVouchertype)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CashVoucherValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CashVoucherValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CashVoucherNote)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CashVoucherNote)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecordOwnerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecordOwnerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RowVersionNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RowVersionNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsDeleted)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPosted)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPosted)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

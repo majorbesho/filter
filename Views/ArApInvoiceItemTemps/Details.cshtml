@@ -1,0 +1,141 @@
+﻿@model IEnumerable<EdgeMobile.Models.ViewModels.InvoiceViewModel>
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.invGroup.GroupName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.invItem.ItemCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.invItemStore.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.invUnit.UnitName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InvoiceCode)
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.InvoiceDate)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Netprice)
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.NetpriceInv)*@
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SellingPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupName)
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.DelegateName)*@
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.CustomerSupplierName)*@
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.BranchName)*@
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var inv in Model.GroupBy(invo=>invo.InvoiceCode))
+{
+<tr>
+    <td> <span class="h3">@inv.Key</span></td>
+    <td>
+        <span class="h3">@inv.Select(invo=>invo.InvoiceCode)</span>
+        @*@Html.DisplayFor(inv => inv.InvoiceCode)*@
+    </td>
+    <td>
+        @*@Html.DisplayFor(inv => inv.InvoiceDate)*@
+    </td>
+</tr>
+    foreach (var item in inv)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.invGroup.GroupName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.invItem.ItemCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.invItemStore.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.invUnit.UnitName)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Netprice)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.NetpriceInv)*@
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.ItemCode)*@
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SellingPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GroupName)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.DelegateName)*@
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.CustomerSupplierName)*@
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.BranchName)*@
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })*@
+        </td>
+    </tr>
+    }
+}
+<div>
+    <input type="submit" value="حفظ" id="save" />
+    <input type="submit" value=" تعديل " id="update" />
+    <input type="submit" value=" الغاء" id="delete" />
+</div>
+</table>

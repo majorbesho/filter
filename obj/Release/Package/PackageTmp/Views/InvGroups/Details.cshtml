@@ -1,0 +1,66 @@
+﻿@model EdgeMobile.Models.InvGroup
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>InvGroup</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.InvGroup2.GroupName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvGroup2.GroupName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroupName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GroupNameEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GroupNameEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NotesEN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotesEN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhotoG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhotoG)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.InvGroupID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,154 @@
+﻿@model IEnumerable<EdgeMobile.Models.ArApInvoiceItemTemp>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ArApInvoiceID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArApInvoiceCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InvItemStoreID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InvUnitID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ConvertFactor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EffectsValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NetPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InvoiceItemFlag)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FreeQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemCostPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemCostPriceFromSupplier)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InvSizeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InvColorID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApPurchasingRequestOrderDetailID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SellingPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArSalesOrderDetailID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OperationType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecordOwnerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArApInvoiceID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArApInvoiceCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InvItemStoreID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InvUnitID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConvertFactor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EffectsValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NetPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InvoiceItemFlag)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FreeQuantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemCostPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemCostPriceFromSupplier)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InvSizeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InvColorID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApPurchasingRequestOrderDetailID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SellingPrice)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArSalesOrderDetailID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OperationType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecordOwnerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ArApInvoiceItemID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ArApInvoiceItemID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ArApInvoiceItemID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,369 @@
+﻿@model EdgeMobile.Models.ArApInvoiceTemp
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ArApInvoiceTemp</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApCustomerSupplier.CustomerSupplierCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApCustomerSupplier.CustomerSupplierCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DefBranch.BranchName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DefBranch.BranchName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DefCurrency.CurrencyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DefCurrency.CurrencyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvStore.StoreName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvStore.StoreName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DueDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DueDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TransactionType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TransactionType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApReturnInvoiceID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApReturnInvoiceID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentMethod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentMethod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApInvoiceTypeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApInvoiceTypeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApSupplyOrderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApSupplyOrderID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExchangeRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExchangeRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApDelegateIDMarketing)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApDelegateIDMarketing)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApDelegateID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApDelegateID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApDelegateIDCollection)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApDelegateIDCollection)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Note)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceFlag)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceFlag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Netprice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Netprice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreditPeriod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreditPeriod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApPurchasingOrderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApPurchasingOrderID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApPurchasingRequestID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApPurchasingRequestID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApPriceOfferID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApPriceOfferID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalDiscountPercentage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalDiscountPercentage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalDiscountValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalDiscountValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalEffectsValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalEffectsValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArApDiscountID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArApDiscountID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsTotalsClaimCalculated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsTotalsClaimCalculated)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalSupplierEffectsValue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalSupplierEffectsValue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GlJournalID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GlJournalID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JournalSerial)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JournalSerial)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArPurposeOfIssueID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArPurposeOfIssueID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArSalesOrderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArSalesOrderID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArPriceOfferID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArPriceOfferID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsIssueTransactions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsIssueTransactions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.recipient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.recipient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InvoiceID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InvoiceID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecordOwnerID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecordOwnerID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RowVersionNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RowVersionNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amountpaid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amountpaid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RemainingAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RemainingAmount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ArWindowShowTypeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ArWindowShowTypeID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

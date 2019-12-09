@@ -1,0 +1,131 @@
+﻿<div class="bg-imag-search">
+
+    <div class="container">
+        <a class="add-custmoer-link" href="~/Customers/Create"><i class="fas fa-user-plus"></i> </a>
+        <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+
+    </div>
+
+    @model EdgeMobile.Models.Customer
+    @using (Html.BeginForm("Details", "Customers"))
+    {
+        @Html.AntiForgeryToken()
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <h1 class="text-center" style="font-size:13rem;"><i class="fas fa-user"></i></h1>
+                    <h3 class="text-center"><p class=" text-dark text-center">@Session["UserName"]</p></h3>
+                    @*<p class=" text-dark">User Login</p>*@
+                </div>
+                <div class="col-md-12 pb-5">
+                    <h1 style="text-align:center;">بحث العملاء</h1>
+                    <div class="row" style="justify-content:center;display:flex;">
+                        <div class="col-md-4 icon-and-search">
+                            <div class="search">
+                                <div class="row">
+                                    <div class="" style="width:10%;float:right;">
+                                        <button type="submit" value="Srearch" title="Search" class=" btn-search"><i class="fas fa-search"></i></button>
+                                    </div>
+                                    <div class="input-search" style="width:90%;float:left;margin-top: .8rem;">
+
+                                        @Html.EditorFor(model => model.Telephone1, "Telephone1", new { htmlAttributes = new { @class = "form-control", @type = "number" } })
+                                        @Html.ValidationMessageFor(model => model.Telephone1, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <div style="width:70%; margin:auto;text-align: center; font-size:20px">
+                        @* <div class="main-btn-gradinte">
+            @Html.ActionLink("عميل جديد", "Create")
+        </div>*@
+                        
+                        @*@Html.ActionLink("بحث", "Search") |*@
+                        <div class="main-btn-gradinte">
+                            @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps")
+                        </div>
+                        @* <div class="main-btn-gradinte">
+                            @Html.ActionLink("الرئيسية", "Cat", "Home")
+                        </div>*@
+                    </div>
+                    </div>
+            </div>
+        </div>
+
+     }
+</div>
+
+
+
+@*@model EdgeMobile.Models.Customer
+    @using (Html.BeginForm("Details", "Customers"))
+    {
+        @Html.AntiForgeryToken()
+
+        <p>
+
+            <div class="form-group">
+
+                @Html.LabelFor(model => model.ArApCustomerSupplierID, "ArApCustomerSupplierID", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                          @Html.DropDownList("ArApCustomerSupplierID",null, "--Select Customer--", htmlAttributes: new { @class = "form-control", @id = "CustomerID" })
+                        @Html.ValidationMessageFor(model => model.ArApCustomerSupplierID, "", new { @class = "text-danger" })
+
+                    @Html.EditorFor(model => model.Telephone1, "Telephone1", new { htmlAttributes = new { @class = "form-control" } })
+                    <input type="submit" value="Srearch" />
+
+                </div>
+            </div>
+
+        </p>
+    }*@
+
+@*<div>
+    @Html.ActionLink("عميل جديد", "Create")
+</div>*@
+
+@*@model EdgeMobile.Models.Customer
+@using (Html.BeginForm("Details", "Customers"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container" style="direction:rtl;float:right;">
+        <div class="row">
+            <div class="col-md-12 ">
+                <p class=" text-dark">@Session["UserName"]</p>
+                
+            </div>
+
+
+        </div>
+        <h1 style="text-align-last :center">بحث العملاء</h1>
+        <div class="row justify-content-center">
+            <div class="form-group col-md-6">
+
+                @Html.LabelFor(model => model.ArApCustomerSupplierID, " الجوال", htmlAttributes: new { @class = "control-label text-center"})
+                <div class="row">
+
+                    <div class="col-md-10">
+
+                        @Html.EditorFor(model => model.Telephone1, "Telephone1", new { htmlAttributes = new { @class = "form-control" ,  @type = "number"  } })
+
+
+                    </div>
+                    <div class="col-md-2 ">
+                        <button type="submit" value="Srearch" title="Search" class="btn btn-primary" style="padding-right:3rem;padding-left:3rem;"><i class="fas fa-search"></i></button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+}*@

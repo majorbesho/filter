@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/EdgeMobile/v16/Server/sqlite3/db.lock
+/.vs/EdgeMobile/v16/Server/sqlite3/storage.ide
+/.vs/EdgeMobile/v16

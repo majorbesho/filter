@@ -1,0 +1,93 @@
+﻿@model IEnumerable<EdgeMobile.Models.GlCashVoucherCash>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ArApCustomerSupplier.CustomerSupplierCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArApDelegate.DelegateCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CashVoucherSerial)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CashVoucherDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CashVouchertype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CashVoucherValue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CashVoucherNote)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecordOwnerID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RowVersionNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsDeleted)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsPosted)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArApCustomerSupplier.CustomerSupplierCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ArApDelegate.DelegateCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CashVoucherSerial)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CashVoucherDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CashVouchertype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CashVoucherValue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CashVoucherNote)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecordOwnerID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RowVersionNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsDeleted)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsPosted)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.GlCashVoucherCID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.GlCashVoucherCID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.GlCashVoucherCID })
+        </td>
+    </tr>
+}
+
+</table>

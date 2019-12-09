@@ -1,0 +1,116 @@
+﻿@model IEnumerable<EdgeMobile.Models.ViewModels.InvItemViewModel>
+
+@{
+    ViewBag.Title = "LoadItems";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container" style="padding-top:2rem;">
+    <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+
+</div>
+@*<h2>LoadItems</h2>*@
+
+@using (Html.BeginForm("LoadItems", "InvGroups", FormMethod.Post))
+{
+    <div>
+        <p class=" text-dark">@Session["UserName"]</p>
+        @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+        @*<p class=" text-dark">User Login</p>*@
+        @Html.TextBox("InvoiceCode", @Session["InvoiceCode"], new { @style = "display:none" })
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row" style="    border: 2px solid #ccc;
+    border-radius: 22px;
+    box-shadow: 11px 17px 22px #ccc;
+    margin-bottom: 2rem;">
+
+
+                    <div class="col-12" style="height: 37rem; position: relative;">
+                        <img src="~/img/items.jpg" alt="Avatar"
+                             style="width:100%;height:100%;">
+                        <div style="position: absolute;
+                                       top: 40%;
+                                       left: 40%;
+                                       color: white;
+                         border-radius: 22px 22px 0 0;"> <h1>Edge</h1></div>
+                    </div>
+                    <div class="col-md-4 pt-3" style="padding-left:0;">
+
+                        <ul class="tab">
+                            @foreach (var group in Model.GroupBy(m => m.GroupName))
+                            {
+                                <li class="tablinksmenu" onclick="openMenu(event, '@group.Key')"> <img src="~/img/product.png" style="width:15%;" /> @group.Key</li>
+                            }
+                        </ul>
+
+                    </div>
+                    <div class="col-md-8 pt-3" style="height: 86rem;overflow: scroll;">
+                        @foreach (var group in Model.GroupBy(m => m.GroupName))
+                        {
+                            <div id="@group.Key" class="tabmenucontent">
+
+                                <table class="table">
+                                    <thead style="background-color:#ccc;">
+                                        <tr>
+                                            <th class="text-center" scope="col">Type Code</th>
+                                            <th class="text-center" scope="col">Type Name</th>
+                                            <th class="text-center" scope="col">Unit</th>
+                                            <th class="text-center" scope="col">Amount</th>
+                                            <th class="text-center" scope="col">Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in group)
+                                        {
+                                            <tr>
+                                                <th scope="row">
+                                                    <img src="~/img/product.png" style="width:25%;" />
+                                                    @Html.DisplayFor(modelItem => item.ItemCode)
+                                                    @Html.TextBox("ItemCode", item.ItemCode, new { @style = "display:none" })
+                                                    @Html.TextBox("InvItemStoreID", item.InvItemStoreID, new { @style = "display:none" })
+                                                    @Html.TextBox("ItemName", item.ItemName, new { @style = "display:none" })
+                                                    @Html.TextBox("InvUnitID", item.InvUnitID, new { @style = "display:none" })
+                                                    @Html.TextBox("SellingPrice", item.SellingPrice, new { @style = "display:none" })
+                                                </th>
+                                                <td>@Html.DisplayFor(modelItem => item.ItemName)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.UnitName)</td>
+                                                <td class="w-25" style="width:25%;">
+                                                    @Html.TextBox("Quan", "", new { @class = "form-control w-25", @type = "number" })
+                                                </td>
+                                                <td colspan="5"> @Html.DisplayFor(modelItem => item.SellingPrice) </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        }
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="container">
+        <div class="main-btn-gradinte">
+            <input type="submit" value="استعراض الفاتورة" class="btn btn-info" />
+        </div>
+
+        @*@Html.ActionLink("LoadItems", "LoadItems")*@
+
+
+    </div>
+
+}
+

@@ -46,7 +46,7 @@ namespace EdgeMobile.Models.ViewModels
         public int InvItemID { get; set; }
         [DisplayName("كود الصنف")]
         public string ItemCode { get; set; }
-        [DisplayName("اسم الصنف")]
+        [DisplayName(" الصنف")]
         public string ItemName { get; set; }
         public int InvUnitID { get; set; }
         [DisplayName("الوحدة")]

@@ -35,9 +35,9 @@ namespace EdgeMobile.Models.ViewModels
         [DisplayName("تاريخ الفاتورة")]
         [DataType(DataType.Date)]
         public DateTime InvoiceDate { get; set; }
-        [DisplayName("اسم الفني")]
+        [DisplayName(" الفني")]
         public string DelegateName { get; set; }
-        [DisplayName("اسم العميل")]
+        [DisplayName(" العميل")]
         public string CustomerSupplierName { get; set; }
         [DisplayName("الفرع")]
         public string BranchName { get; set; }

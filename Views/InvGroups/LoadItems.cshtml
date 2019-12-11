@@ -57,18 +57,18 @@
                                 <table class="table">
                                     <thead style="background-color:#ccc;">
                                         <tr>
-                                            <th class="text-center" scope="col">Type Code</th>
-                                            <th class="text-center" scope="col">Type Name</th>
-                                            <th class="text-center" scope="col">Unit</th>
-                                            <th class="text-center" scope="col">Amount</th>
-                                            <th class="text-center" scope="col">Price</th>
+                                            <th class="text-center" scope="col" style="display:none">الكود</th>
+                                            <th class="text-center" scope="col">الصنف</th>
+                                            <th class="text-center" scope="col">الوحدة</th>
+                                            <th class="text-center" scope="col">الكمية</th>
+                                            <th class="text-center" scope="col">السعر</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach (var item in group)
                                         {
                                             <tr>
-                                                <th scope="row">
+                                                <th scope="row" >
                                                     <img src="~/img/product.png" style="width:25%;" />
                                                     @Html.DisplayFor(modelItem => item.ItemCode)
                                                     @Html.TextBox("ItemCode", item.ItemCode, new { @style = "display:none" })

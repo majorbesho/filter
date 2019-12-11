@@ -702,3 +702,4 @@ D:\EdgeMobile\GitFlater\filter\bin\Microsoft.CodeDom.Providers.DotNetCompilerPla
 D:\EdgeMobile\GitFlater\filter\obj\Debug\EdgeMobile.csproj.CopyComplete
 D:\EdgeMobile\GitFlater\filter\obj\Debug\EdgeMobile.dll
 D:\EdgeMobile\GitFlater\filter\obj\Debug\EdgeMobile.pdb
+D:\EdgeMobile\GitFlater\filter\obj\Debug\EdgeMobile.csprojAssemblyReference.cache

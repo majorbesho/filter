@@ -28,7 +28,7 @@
             @Html.DisplayNameFor(model => model.invUnit.UnitName)
         </th>*@
 
-        <th style="text-align-last:right; background-color:ButtonFace; font-weight: bold;">
+        <th style="text-align-last:right; background-color:ButtonFace; font-weight: bold; display:none;">
             @Html.DisplayNameFor(model => model.ItemCode)
         </th>
         <th style="text-align-last:right ; background-color:ButtonFace; font-weight: bold;">
@@ -74,7 +74,7 @@
             @Html.DisplayFor(modelItem => item.UnitName)
         </td>*@
 
-    <td style="">
+    <td style="display:none">
         @Html.DisplayFor(modelItem => item.ItemCode)
     </td>
     <td>

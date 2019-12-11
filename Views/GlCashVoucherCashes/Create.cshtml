@@ -1,134 +1,152 @@
 ﻿@model EdgeMobile.Models.GlCashVoucherCash
 
 
-<div>
-    <p class=" text-dark">@Session["UserName"]</p>
-    @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
 
-</div>
 <div class="container" style="padding-top:3rem;">
     <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
     @*@Html.ActionLink("عميل جديد", "Create")*@
 </div>
-<h4 style="text-align-last :center; padding:5px; font-size:35px; color:#1984c8">سندات القبض</h4>
-<div class="container">
-    @using (Html.BeginForm())
-    {
-        @Html.AntiForgeryToken()
+<div class="row" style="justify-content:center;display:flex;width:100%;">
+    <div class="col-md-12 text-center">
+        <h1 class="text-center user-login">
+            <i class="fas fa-user"></i>
+        </h1>
+        <p class=" text-dark">@Session["UserName"]</p>
+        @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+        @*<p class=" text-dark">User Login</p>*@
+        @*@Html.TextBox("ArApInvoiceID", @Session["ArApInvoiceID"], new { @style = "display:none" })*@
+            </div>
+        </div>
+        <div class="container">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
 
- 
 
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="row pb-5" style="justify-content:center;display:flex;">
-            <div class="col-md-8 col-sm-8 col-xs-8 col-xxs-8">
-                <div class="row shadow-full-grid">
 
-                    <div class="col-md-12 card-img-slide-cash-voucher">
-                        <img src="~/img/creat-customer-background-slide.jpg" alt="Avatar">
-                    </div>
-                    <div class="col-md-12 pt-3 creat-customer-shadow-form">
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="row pb-5" style="justify-content:center;display:flex;">
+                    <div class="col-md-10 col-sm-10 col-xs-10 col-xxs-10">
+                        <div class="row shadow-full-grid">
 
-                        <form>
-                            <div class="row media-query-input">
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <div class="main-input-group">
-                                        @Html.Label("CashVoucherSerial", (string)ViewBag.CashVoucherSerial, new { htmlAttributes = new { @class = "main-input", @Value = (string)ViewBag.CashVoucherSerial } })
-                                        <span class="highlightlanle"></span>
-                                        <span class="bar-lable"></span>
-                                        @Html.LabelFor(model => model.CashVoucherSerial, "رقم السند", htmlAttributes: new { @class = "main-label " })
-                                    </div>
-                                        @Html.ValidationMessageFor(model => model.CashVoucherSerial, "", new { @class = "text-danger" })
-                                    
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <div class="row media-query-input">
-                                        @Html.DropDownList("ArApDelegateID", null, htmlAttributes: new { @class = "main-input" })
-
-                                        <span class="highlightlanle"></span>
-                                        <span class="bar-lable"></span>
-                                        @Html.LabelFor(model => model.ArApDelegateID, "الفني", htmlAttributes: new { @class = "main-label " })
-
-                                    </div>  
-                                    @Html.ValidationMessageFor(model => model.ArApDelegateID, "", new { @class = "text-danger" })
-                                    
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-4">
-                                    <div class="main-input-group">
-                                        @Html.DropDownList("ArApCustomerSupplierID", null, htmlAttributes: new { @class = "main-input" })
-
-                                        <span class="highlightlanle"></span>
-                                        <span class="bar-lable"></span>
-                                        @Html.LabelFor(model => model.ArApCustomerSupplierID, "اسم العميل", htmlAttributes: new { @class = "main-label " })
-
-                                    </div>  
-                                    @Html.ValidationMessageFor(model => model.ArApCustomerSupplierID, "", new { @class = "text-danger" })
-                                   
-                                </div>
+                            <div class="col-md-12 card-img-slide-cash-voucher">
+                                <img src="~/img/creat-customer-background-slide.jpg" alt="Avatar">
                             </div>
+                            <div class="col-md-12 pt-3 creat-customer-shadow-form">
+                                <h4 style="text-align-last :center; padding:5px; font-size:35px; color:#1984c8">سندات القبض</h4>
+                                <form>
+                                    <div class="row media-query-input" style="display:flex;">
 
-                            <div class="row media-query-input">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="main-input-group">
-                                        @Html.EditorFor(model => model.CashVoucherValue, new { htmlAttributes = new { @class = "main-input", @type = "number" } })
+                                        <div class="col-md-4 col-sm-6 col-xs-12">
+                                            <div class="main-group-input-dynamic">
+                                                @Html.LabelFor(model => model.CashVoucherSerial, "رقم السند", htmlAttributes: new { @class = "lable-dynamic " })
+                                                @Html.Label("CashVoucherSerial", (string)ViewBag.CashVoucherSerial, new { htmlAttributes = new { @class = "main-input", @Value = (string)ViewBag.CashVoucherSerial } })
 
-                                        <span class="highlightlanle"></span>
-                                        <span class="bar-lable"></span>
-                                        @Html.LabelFor(model => model.CashVoucherValue, "قيمة السند", htmlAttributes: new { @class = "main-label" })
-                                    </div>
-                                            @Html.ValidationMessageFor(model => model.CashVoucherValue, "", new { @class = "text-danger" })
-                                        
-                                    </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="main-input-group">
-
-                                        @Html.EditorFor(model => model.CashVoucherNote, new { htmlAttributes = new { @class = "main-input" } })
-                                        <span class="highlightlanle"></span>
-                                        <span class="bar-lable"></span>
-                                        @Html.LabelFor(model => model.CashVoucherNote, "ملاحظات", htmlAttributes: new { @class = "main-label " })
-
-                                    </div>  
-                                        @Html.ValidationMessageFor(model => model.CashVoucherNote, "", new { @class = "text-danger" })
-                                        
-                                    </div>
-
-                                </div>
-
-
-                        </form>
-                        <div class="row form-btn">
-                            <div class="col-md-12 form-btn-body">
-                                <div class="form-group">
-                                    <div class="main-btn-gradinte">
-                                        @*<i class="fas fa-save"></i>*@
-                                        <button type="submit" value="حفظ" title="Save" class="btn btn-primary">حفظ</button>
-                                        @if (ViewBag.Msgg == 1)
-                                        {
-                                            <div class="form-group">
-                                                <div class="alert alert-success alert-dismissable fade-in" id="success-alert">
-                                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                                                    <strong>تم الحفظ بنجاح</strong>
-                                                </div>
                                             </div>
-                                        }
+                                            @Html.ValidationMessageFor(model => model.CashVoucherSerial, "", new { @class = "text-danger" })
+
+                                        </div>
+                                        <div class="col-md-8 col-sm-6 col-xs-12">
+                                            <div class="main-input-group">
+                                                @Html.DropDownList("ArApDelegateID", null, htmlAttributes: new { @class = "main-input" })
+                                                <span class="highlightlanle"></span>
+                                                <span class="bar-lable"></span>
+                                                @Html.LabelFor(model => model.ArApDelegateID, "الفني", htmlAttributes: new { @class = "main-label " })
+
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.ArApDelegateID, "", new { @class = "text-danger" })
+
+                                        </div>
+
                                     </div>
+                                    <div class="row">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="main-input-group">
+                                                @Html.DropDownList("ArApCustomerSupplierID", null, htmlAttributes: new { @class = "main-input" })
+                                                <span class="highlightlanle"></span>
+                                                <span class="bar-lable"></span>
+                                                @Html.LabelFor(model => model.ArApCustomerSupplierID, "اسم العميل", htmlAttributes: new { @class = "main-label " })
+
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.ArApCustomerSupplierID, "", new { @class = "text-danger" })
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row media-query-input">
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="main-input-group">
+                                                @Html.EditorFor(model => model.CashVoucherValue, new { htmlAttributes = new { @class = "main-input", @type = "number" } })
+
+                                                <span class="highlightlanle"></span>
+                                                <span class="bar-lable"></span>
+                                                @Html.LabelFor(model => model.CashVoucherValue, "قيمة السند", htmlAttributes: new { @class = "main-label" })
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.CashVoucherValue, "", new { @class = "text-danger" })
+
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12">
+                                            <div class="main-input-group">
+
+                                                @Html.EditorFor(model => model.CashVoucherNote, new { htmlAttributes = new { @class = "main-input" } })
+                                                <span class="highlightlanle"></span>
+                                                <span class="bar-lable"></span>
+                                                @Html.LabelFor(model => model.CashVoucherNote, "ملاحظات", htmlAttributes: new { @class = "main-label " })
+
+                                            </div>
+                                            @Html.ValidationMessageFor(model => model.CashVoucherNote, "", new { @class = "text-danger" })
+
+                                        </div>
+
+                                    </div>
+
+
+                                </form>
+                                <div class="row form-btn">
+                                    <div class="col-md-12 form-btn-body" style="display: flex;
+            justify-content: center;">
+                                        <div class="form-group">
+                                            <div class="main-btn-gradinte">
+                                                @*<i class="fas fa-save"></i>*@
+        <button type="submit" value="حفظ" title="Save" class="btn btn-primary">حفظ</button>
+        @if (ViewBag.Msgg == 1)
+        {
+            <div class="form-group">
+                <div class="alert alert-success alert-dismissable fade-in" id="success-alert">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>تم الحفظ بنجاح</strong>
+                </div>
+            </div>
+        }
+    </div>
                                 </div>
                             </div>
                         </div>
 
 
-                        <br />
-                        <br />
-                        <br />
-
-
-
-                        <div class="row" style="width:70%; margin:auto;text-align: center; font-size:20px">
-                            @Html.ActionLink("عميل جديد", "Create", "Customers") |
-                            @*@Html.ActionLink("بحث", "Search") |*@
-                            @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps") |
-                            @*@Html.ActionLink("الرئيسية", "Cat", "Home")*@
+                        <div class="row main-btn-media-query">
+                            <div class="col-md-6 col-sm-12 col-xs-12 col-xxs-12 media-query-btn-group">
+                                <div class="row" style="justify-content:center;display:flex;">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12 main-btn-gradinte">
+                                        @Html.ActionLink("عميل جديد", "Create", "Customers")
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 col-xs-12 col-xxs-12 media-query-btn-group">
+                                <div class="row" style="justify-content:center;display:flex;">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12 main-btn-gradinte">
+                                        @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps")
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        @* <div class="row main-btn-gradinte">
+                        @Html.ActionLink("عميل جديد", "Create", "Customers")
+                        @Html.ActionLink("بحث", "Search")
+        @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps")
+        @Html.ActionLink("الرئيسية", "Cat", "Home")
+                    </div>*@
                     </div>
 
                 </div>

@@ -737,7 +737,7 @@ table, thead , tbody{
 /* Start Customer-datiles-table*/
 .customer-heading-first-element {
     text-align: center;
-    padding: 42px
+    margin-top:0;
 }
 .Customer-datiles-table-img-icon {
     color: white;
@@ -746,6 +746,12 @@ table, thead , tbody{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     font-size: 17rem;
     margin-top: 0;
+}
+.user-login{
+    font-size: 7rem;
+}
+.user-login-creat-invoice {
+    color:white;
 }
 .Customer-datiles-table {
     border-right: 5px solid #CCC;
@@ -799,6 +805,7 @@ table, thead , tbody{
 .shadow-card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     padding:2rem;
+    border:1px solid #ccc;
 }
 
 /* End Customer-datiles-table*/
@@ -820,7 +827,7 @@ table, thead , tbody{
     }
 .card-img-slide-cash-voucher {
     box-shadow: 2px 7px 43px 0px rgba(0,0,0,0.2);
-    height: 23rem;
+    height: 13rem;
     position: relative;
     padding: 0;
 }
@@ -830,7 +837,7 @@ table, thead , tbody{
         height: 100%;
     }
 .creat-customer-shadow-form {
-    padding: 4.5rem 3rem 4.5rem 3rem;
+    padding: .5rem 3rem .5rem 3rem;
 }
 /*
 .form-btn{
@@ -855,7 +862,6 @@ padding-top:1rem;
 /* Start input form  */
 .main-input-group {
     position: relative;
-    margin-bottom: 45px;
     margin-top:2rem;
 }
 
@@ -1101,9 +1107,15 @@ body {
 }
 /* Start invoice table edite*/
 tr.table-tr-invoice-edite {
-    background-color: black;
-    color: white;
-    font-size: 3rem;
+    background-color: #ccc;
+    color: black;
+    font-size: 2rem;
+}
+tr.table-tr-invoice-edite th {
+    text-align: center;
+}
+.table-incovoice-edite-tbody tr:nth-child(even) {
+    background-color: #cccccc75;
 }
 .table-incovoice-edite-tbody tr td {
     font-size: 2rem;
@@ -1114,7 +1126,7 @@ table.dir {
     width: 100%;
     margin: 0;
     box-shadow: 0 -1px 46px 5px #ccc;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
     table.dir .table-incovoice-edite-tbody tr:nth-child(even) {
         background-color: #cccccc75;
@@ -1124,15 +1136,18 @@ table.dir {
         /*End creat Invoice */
 
         /* Strat Main Button*/
+
 .main-btn-gradinte a, .main-btn-gradinte button, .main-btn-gradinte input {
     background: linear-gradient(to right,#1e2080, #266bd2fa);
     color: white;
-    padding: 1.3rem 4rem 1.3rem 4rem;
+    padding: 1.3rem 1rem 1.3rem 1rem;
     border: 0;
     border-radius: .3rem;
     margin-top: 2rem;
     font-size: 1.6rem;
     font-weight: bold;
+    width: 14rem;
+    text-align:center;
 }
     .main-btn-gradinte a:first-of-type{
         float: right;
@@ -1269,10 +1284,11 @@ table.dir {
         padding: 0 7px;
     }
 }
-@media(min-width:991px) {
+@media(min-width:992px) {
     .media-query-input {
         display: flex;
     }
+
     .product-item:last-of-type {
         display: block;
     }
@@ -1280,12 +1296,27 @@ table.dir {
 
 @media(max-width:991px) {
     .media-query-input:first-of-type {
-        display: flex;
+        display: block;
     }
     .media-query-input:nth-of-type(2) {
         display: flex;
     }
     .media-query-input:last-of-type {
         display: block;
+    }
+}
+
+@media(min-width:712px) {
+    .main-btn-media-query {
+        display:flex;
+    }
+}
+@media(max-width:712px) {
+    .main-btn-media-query {
+        display: block;
+    }
+    .media-query-btn-group {
+        display: flex;
+        justify-content: center;
     }
 }

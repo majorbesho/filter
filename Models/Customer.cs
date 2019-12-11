@@ -27,9 +27,12 @@ namespace EdgeMobile.Models
 
 
         }
+        
         public int ArApCustomerSupplierID { get; set; }
         [Required(ErrorMessage = ".برجاء ادخال كود العميل")]
+       
         public string CustomerSupplierCode { get; set; }
+        [DisplayName("العميل")]
         [Required(ErrorMessage = ".برجاء ادخال اسم العميل")]
         public string CustomerSupplierName { get; set; }
         public string CustomerSupplierNameEN { get; set; }
@@ -47,11 +50,12 @@ namespace EdgeMobile.Models
         public string POBox { get; set; }
         public string PostalCode { get; set; }
         public string RecordTrading { get; set; }
+        [DisplayName("الجوال 1")]
         [Required(ErrorMessage = ".برجاء ادخال رقم الجوال")]
         [StringLength(15, MinimumLength = 9, ErrorMessage = "* .برجاء ادخال رقم الجوال")]
         [DataType(DataType.PhoneNumber)]
         public string Telephone1 { get; set; }
-      
+        [DisplayName("الجوال 2")]
 
         [StringLength(15, MinimumLength = 9, ErrorMessage = "* .برجاء ادخال رقم الجوال")]
         [DataType(DataType.PhoneNumber)]
@@ -63,6 +67,7 @@ namespace EdgeMobile.Models
         [DisplayName("البريد الالكتروني")]
         public string Email { get; set; }
         public string ResponsibleName { get; set; }
+        [DisplayName("العنوان")]
         [Required(ErrorMessage = ".برجاء ادخال عنوان العميل")]
         public string Address { get; set; }
         public short HasCreditLimit { get; set; }

@@ -750,6 +750,9 @@ table, thead , tbody{
 .user-login{
     font-size: 7rem;
 }
+.user-login-creat-invoice {
+    color:white;
+}
 .Customer-datiles-table {
     border-right: 5px solid #CCC;
 }
@@ -824,7 +827,7 @@ table, thead , tbody{
     }
 .card-img-slide-cash-voucher {
     box-shadow: 2px 7px 43px 0px rgba(0,0,0,0.2);
-    height: 23rem;
+    height: 13rem;
     position: relative;
     padding: 0;
 }
@@ -1133,15 +1136,18 @@ table.dir {
         /*End creat Invoice */
 
         /* Strat Main Button*/
+
 .main-btn-gradinte a, .main-btn-gradinte button, .main-btn-gradinte input {
     background: linear-gradient(to right,#1e2080, #266bd2fa);
     color: white;
-    padding: 1.3rem 4rem 1.3rem 4rem;
+    padding: 1.3rem 1rem 1.3rem 1rem;
     border: 0;
     border-radius: .3rem;
     margin-top: 2rem;
     font-size: 1.6rem;
     font-weight: bold;
+    width: 14rem;
+    text-align:center;
 }
     .main-btn-gradinte a:first-of-type{
         float: right;
@@ -1278,10 +1284,11 @@ table.dir {
         padding: 0 7px;
     }
 }
-@media(min-width:991px) {
+@media(min-width:992px) {
     .media-query-input {
         display: flex;
     }
+
     .product-item:last-of-type {
         display: block;
     }
@@ -1289,12 +1296,27 @@ table.dir {
 
 @media(max-width:991px) {
     .media-query-input:first-of-type {
-        display: flex;
+        display: block;
     }
     .media-query-input:nth-of-type(2) {
         display: flex;
     }
     .media-query-input:last-of-type {
         display: block;
+    }
+}
+
+@media(min-width:712px) {
+    .main-btn-media-query {
+        display:flex;
+    }
+}
+@media(max-width:712px) {
+    .main-btn-media-query {
+        display: block;
+    }
+    .media-query-btn-group {
+        display: flex;
+        justify-content: center;
     }
 }

@@ -6,13 +6,17 @@
 }
 
 
-
-<div class="col-md-12 ">
-    <p class=" text-dark">@Session["UserName"]</p>
-    @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
-    @*<p class=" text-dark">User Login</p>*@
-    @Html.TextBox("ArApInvoiceID", @Session["ArApInvoiceID"], new { @style = "display:none" })
-</div>
+    <div class="row" style="justify-content:center;display:flex;width:100%;">
+        <div class="col-md-12 text-center">
+            <h1 class="text-center user-login">
+                <i class="fas fa-user"></i>
+            </h1>
+            <p class=" text-dark">@Session["UserName"]</p>
+            @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+            @*<p class=" text-dark">User Login</p>*@
+            @Html.TextBox("ArApInvoiceID", @Session["ArApInvoiceID"], new { @style = "display:none" })
+        </div>
+    </div>
 <div class="container" style="padding:1.5rem;">
     <a class="add-custmoer-link" style="float:left; padding:1.5rem;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
 </div>

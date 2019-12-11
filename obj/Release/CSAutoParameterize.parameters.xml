@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="ERPEdgeContext-Web.config Connection String" description="ERPEdgeContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=Dev2;Initial Catalog=AppMobile28;User ID=sa;Password=sasa;MultipleActiveResultSets=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Besho\\Desktop\\EdgeMobile20191208\\Git\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ERPEdgeContext']/@connectionString" />
-  </parameter>
-  <parameter name="EdgeSecurityContext-Web.config Connection String" description="EdgeSecurityContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=DEV2;Initial Catalog=EdgeSecurity;User ID=sa;Password=sasa;MultipleActiveResultSets=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\Besho\\Desktop\\EdgeMobile20191208\\Git\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='EdgeSecurityContext']/@connectionString" />
-  </parameter>
-</parameters>

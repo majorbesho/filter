@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 
@@ -19,6 +20,7 @@ namespace EdgeMobile.Models
         public int LocationLevel { get; set; }
         public Nullable<int> DefLocationIDParent { get; set; }
         public int LocationCode { get; set; }
+        [DisplayName("المدينة")]
         public string LocationName { get; set; }
         public string LocationNameEN { get; set; }
         public int DefLocationTypeID { get; set; }

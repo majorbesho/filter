@@ -24,7 +24,7 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td align="center" colspan="2" style=" font-weight: bold; font-size:18px;"> 
+            <td align="center" colspan="4" style=" font-weight: bold; font-size:18px;"> 
                 @Html.DisplayNameFor(model => model.InvoiceCode)
 
                 @Html.DisplayFor(modelItem => item.InvoiceCode)
@@ -33,52 +33,62 @@
             </td>
         </tr>
         <tr>
-            <td style=" text-align:center; font-weight: bold; font-size:18px;">
+            <td style="width:15%"></td>
+            <td style=" text-align:right; font-weight: bold; font-size:18px;">
                 @Html.DisplayNameFor(model => model.CustomerSupplierName)
             </td>
-            <td style="direction:rtl; text-align:center;font-size:18px;">
+            <td style="width:15%"></td>
+            <td style="direction:rtl; text-align:right;font-size:18px;">
                 @Html.DisplayFor(modelItem => item.CustomerSupplierName)
             </td>
-
+            
 
         </tr>
         <tr>
-
-            <td style="direction:rtl; text-align:center; font-weight: bold; font-size:18px;">
+            <td></td>
+            <td style="direction:rtl; text-align:right; font-weight: bold; font-size:18px;">
                 @Html.DisplayNameFor(model => model.InvoiceDate)
-                
+
             </td>
-            <td style="direction:rtl; text-align:center">
+            <td></td>
+            <td style="direction:rtl; text-align:right">
                 @Html.DisplayFor(modelItem => item.InvoiceDate)
             </td>
+            
         </tr>
         <tr>
-            <td style="direction:rtl; text-align:center; font-weight: bold; font-size:18px;">
+            <td></td>
+            <td style="direction:rtl; text-align:right; font-weight: bold; font-size:18px;">
                 @Html.DisplayNameFor(model => model.DelegateName)
             </td>
-            <td style="direction:rtl; text-align:center">
+            <td></td>
+            <td style="direction:rtl; text-align:right">
                 @Html.DisplayFor(modelItem => item.DelegateName)
             </td>
-
+            
         </tr>
         <tr>
-            <td style="direction:rtl; text-align:center; font-weight: bold; font-size:18px;">
+            <td></td>
+            <td style="direction:rtl; text-align:right; font-weight: bold; font-size:18px;">
                 @Html.DisplayNameFor(model => model.BranchName)
             </td>
-            <td style="direction:rtl; text-align:center">
+            <td></td>
+            <td style="direction:rtl; text-align:right">
                 @Html.DisplayFor(modelItem => item.BranchName)
             </td>
-
+            
 
         </tr>
         <tr>
-            <td style="direction:rtl; text-align:center; font-weight: bold; font-size:18px;">
+            <td></td>
+            <td style="direction:rtl; text-align:right; font-weight: bold; font-size:18px;">
                 @Html.DisplayNameFor(model => model.Netprice)
             </td>
-            <td style="direction:rtl; text-align:center">
+            <td></td>
+            <td style="direction:rtl; text-align:right">
                 @Html.DisplayFor(modelItem => item.Netprice)
             </td>
-
+            
 
         </tr>
     }

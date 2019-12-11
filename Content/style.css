@@ -737,7 +737,7 @@ table, thead , tbody{
 /* Start Customer-datiles-table*/
 .customer-heading-first-element {
     text-align: center;
-    padding: 42px
+    margin-top:0;
 }
 .Customer-datiles-table-img-icon {
     color: white;
@@ -746,6 +746,9 @@ table, thead , tbody{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     font-size: 17rem;
     margin-top: 0;
+}
+.user-login{
+    font-size: 7rem;
 }
 .Customer-datiles-table {
     border-right: 5px solid #CCC;
@@ -799,6 +802,7 @@ table, thead , tbody{
 .shadow-card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     padding:2rem;
+    border:1px solid #ccc;
 }
 
 /* End Customer-datiles-table*/
@@ -830,7 +834,7 @@ table, thead , tbody{
         height: 100%;
     }
 .creat-customer-shadow-form {
-    padding: 4.5rem 3rem 4.5rem 3rem;
+    padding: .5rem 3rem .5rem 3rem;
 }
 /*
 .form-btn{
@@ -855,7 +859,6 @@ padding-top:1rem;
 /* Start input form  */
 .main-input-group {
     position: relative;
-    margin-bottom: 45px;
     margin-top:2rem;
 }
 
@@ -1101,9 +1104,15 @@ body {
 }
 /* Start invoice table edite*/
 tr.table-tr-invoice-edite {
-    background-color: black;
-    color: white;
-    font-size: 3rem;
+    background-color: #ccc;
+    color: black;
+    font-size: 2rem;
+}
+tr.table-tr-invoice-edite th {
+    text-align: center;
+}
+.table-incovoice-edite-tbody tr:nth-child(even) {
+    background-color: #cccccc75;
 }
 .table-incovoice-edite-tbody tr td {
     font-size: 2rem;
@@ -1114,7 +1123,7 @@ table.dir {
     width: 100%;
     margin: 0;
     box-shadow: 0 -1px 46px 5px #ccc;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
     table.dir .table-incovoice-edite-tbody tr:nth-child(even) {
         background-color: #cccccc75;

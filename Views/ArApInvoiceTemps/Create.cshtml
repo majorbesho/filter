@@ -105,15 +105,17 @@
                                     <span class="highlightlanle"></span>
                                     <span class="bar-lable"></span>
                                     <label class="main-label ">Name</label>
-                                </div>*@
+                                </div>*@ 
                                 @*  @Html.LabelFor(model => model.GroupNameEN, htmlAttributes: new { @class = "control-label" })*@
 
                                 <div class="main-input-group">
                                     @Html.DropDownList("ArApCustomerSupplierID", null, htmlAttributes: new { @class = "main-input" })
                                     @*@Html.DropDownListFor(model => model.ArApCustomerSupplierID, model.SomeSelectList, "Select one...", new { @class = "your-class-here" })*@
-                                    <span class="highlightlanle"></span>
-                                    <span class="bar-lable"></span>
-                                    @Html.LabelFor(model => model.ArApCustomerSupplierID, "العميل", htmlAttributes: new { @class = "main-label" })
+                                   
+                                    @*(IEnumerable<SelectListItem>)*@
+                                        <span class="highlightlanle"></span>
+                                        <span class="bar-lable"></span>
+                                        @Html.LabelFor(model => model.ArApCustomerSupplierID, "العميل", htmlAttributes: new { @class = "main-label" })
                                 </div>
                                 @Html.ValidationMessageFor(model => model.ArApCustomerSupplierID, "", new { @class = "text-danger" })
                             </div>
@@ -195,8 +197,7 @@
                                     <input type="submit" value="الاصناف" class="btn btn-default" />
                                 </div>
                             </div>*@
-                            <div class="row" style="    justify-content: end;
-    display: flex;">
+                            <div class="row" style="    justify-content: end; display: flex;">
                                 <div class="col-md-10 main-btn-gradinte">
                                     <input type="submit" value="اصناف" class="btn btn-default" />
                                 </div>

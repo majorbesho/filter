@@ -51,29 +51,11 @@ namespace EdgeMobile.Controllers
         public ActionResult Details(FormCollection form)
         {
           
-            
-         //   string strDDLValue = Request.Form["ArApCustomerSupplierID"].ToString();
             string strDDLValue = Request.Form["Telephone1"].ToString();
             int ArApCustomerSupplierID = db.Customer.Where(m => m.Telephone1 == strDDLValue || m.Telephone2==strDDLValue).Select(e => e.ArApCustomerSupplierID).FirstOrDefault();
             if (strDDLValue == "")
             {
-                //int DelegateID = int.Parse(Session["SecUserID"].ToString());
-                //var Cust = (from customeri in db.Customer
-                //            where customeri.ArApDelegateID == DelegateID
-                //            select new
-                //            {
-                //                customeri.ArApCustomerSupplierID,
-                //                customeri.CustomerSupplierCode,
-                //                customeri.CustomerSupplierName,
-                //                customeri.Telephone1,
-                //                customeri.Address
-                //            }).ToList();
-
                return RedirectToAction("IndexbyUserIDP");
-              //  ModelState.AddModelError("Telephone1", "جوال غير مستخدم");
-                //return View("Search");
-                //return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-                // return HttpNotFound();
             }
             Customer customer = db.Customer.Find(ArApCustomerSupplierID);
             if (customer == null)
@@ -82,6 +64,25 @@ namespace EdgeMobile.Controllers
                 return View("Search");
             }
             return View(new[] { customer });
+        }
+
+        public ActionResult Details2(int? id)
+        {
+            Customer customer = db.Customer.Find(id);
+            return View(customer);
+            //string strDDLValue = Request.Form["Telephone1"].ToString();
+            //int ArApCustomerSupplierID = db.Customer.Where(m => m.Telephone1 == strDDLValue || m.Telephone2 == strDDLValue).Select(e => e.ArApCustomerSupplierID).FirstOrDefault();
+            //if (strDDLValue == "")
+            //{
+            //    return RedirectToAction("IndexbyUserIDP");
+            //}
+            //Customer customer = db.Customer.Find(ArApCustomerSupplierID);
+            //if (customer == null)
+            //{
+            //    ModelState.AddModelError("Telephone1", "جوال غير مستخدم");
+            //    return View("Search");
+            //}
+            //return View(new[] { customer });
         }
         public ActionResult IndexbyUserIDP(int? page)
         {

@@ -4,17 +4,23 @@
 @{
     ViewBag.Title = "Create";
 }
-
-<div class="col-md-12 ">
-    <p class=" text-dark">@Session["UserName"]</p>
-    @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
-    @*<p class=" text-dark">User Login</p>*@
-    @*@Html.TextBox("ArApInvoiceID", @Session["ArApInvoiceID"], new { @style = "display:none" })*@
-</div>
+    
+    
 <div class="container" style="padding-top:3rem;">
     <a class="add-custmoer-link" href="~/Customers/search"><i class="fas fa-search"></i> </a>
     <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
     @*@Html.ActionLink("عميل جديد", "Create")*@
+</div>
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h1 class="text-center user-login">
+            <i class="fas fa-user"></i>
+        </h1>
+        <p class=" text-dark">@Session["UserName"]</p>
+        @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+        @*<p class=" text-dark">User Login</p>*@
+        @*@Html.TextBox("ArApInvoiceID", @Session["ArApInvoiceID"], new { @style = "display:none" })*@
+    </div>
 </div>
 @using (Html.BeginForm())
 {
@@ -28,22 +34,17 @@
             <div class="col-md-8 col-sm-8 col-xs-8 col-xxs-8">
                 <div class="row shadow-full-grid">
 
-                    <div class="col-md-12 card-img-slide">
-                        <img src="~/img/creat-customer-background-slide.jpg" alt="Avatar">
-                    </div>
+                    @*  <div class="col-md-12 card-img-slide">
+        <img src="~/img/creat-customer-background-slide.jpg" alt="Avatar">
+                </div>*@
                     <div class="col-md-12 pt-3 creat-customer-shadow-form">
-                        <h1 class="text-center" style="margin-bottom:4rem;">بيانات العميل</h1>
-
+                        <h1 class="text-center">بيانات العميل</h1>
                         <form>
                             <div class="row media-query-input">
                                 <div class="col-md-3 col-sm-3 col-xs-3">
                                     <div class="main-group-input-dynamic">
                                         @Html.LabelFor(model => model.CustomerSupplierCode, "كود العميل", htmlAttributes: new { @class = "lable-dynamic " })
                                         @Html.Label("CustomerSupplierCode", (string)ViewBag.CustomerSupplierCode, new { htmlAttributes = new { @class = "input-dynamic", @Value = (string)ViewBag.CustomerSupplierCode } })
-
-
-
-
                                     </div>
                                     @Html.ValidationMessageFor(model => model.CustomerSupplierCode, "", new { @class = "text-danger" })
 
@@ -60,8 +61,6 @@
                                     @Html.ValidationMessageFor(model => model.CustomerSupplierName, "", new { @class = "text-danger" })
 
                                 </div>
-                            </div>
-                            <div class="row media-query-input">
                                 <div class="col-md-4 col-sm-4 col-xs-4">
                                     <div class="main-input-group">
                                         @Html.DropDownList("DefLocationID", null, htmlAttributes: new { @class = "main-input" })
@@ -74,18 +73,6 @@
                                     @Html.ValidationMessageFor(model => model.DefLocationID, "", new { @class = "text-danger" })
 
 
-
-                                </div>
-                                <div class="col-md-8 col-sm-8 col-xs-8">
-                                    <div class="main-input-group">
-                                        @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "main-input" } })
-
-                                        <span class="highlightlanle"></span>
-                                        <span class="bar-lable"></span>
-                                        @Html.LabelFor(model => model.Address, "العنوان", htmlAttributes: new { @class = "main-label" })
-
-                                    </div>
-                                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
 
                                 </div>
                             </div>
@@ -118,7 +105,20 @@
 
                             </div>
                             <div class="row media-query-input">
-                                <div class="col-md-12 ">
+
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="main-input-group">
+                                        @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "main-input" } })
+
+                                        <span class="highlightlanle"></span>
+                                        <span class="bar-lable"></span>
+                                        @Html.LabelFor(model => model.Address, "العنوان", htmlAttributes: new { @class = "main-label" })
+
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12 ">
                                     <div class="main-input-group">
                                         @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "main-input" } })
                                         <span class="highlightlanle"></span>
@@ -129,6 +129,10 @@
                                     @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger", type = "email" })
 
                                 </div>
+                            </div>
+
+                            <div class="row media-query-input">
+                                
                             </div>
                             <div class="row media-query-input">
                                 <div class="col-md-12 ">
@@ -146,8 +150,8 @@
                             </div>
 
                         </form>
-                        <div class="row form-btn">
-                            <div class="col-md-12 form-btn-body">
+                        <div class="row form-btn" style="display:flex;justify-content:center;">
+                            <div class="col-md-2 form-btn-body">
                                 <div class="form-group">
                                     <div class="main-btn-gradinte">
                                         @*<i class="fas fa-save"></i>*@
@@ -188,9 +192,6 @@
             </div>
            
         </div>
-        <div>
-                @Html.ActionLink("الرئيسية", "Cat","Home")
-            </div>
     </div>
     <div >
 

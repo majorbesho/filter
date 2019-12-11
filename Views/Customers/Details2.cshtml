@@ -1,0 +1,152 @@
+﻿@model EdgeMobile.Models.Customer
+
+@{
+    ViewBag.Title = "Details2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container" style="padding-top:2rem;">
+    <a class="add-custmoer-link" href="~/Customers/Create"><i class="fas fa-user-plus"></i> </a>
+    <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+
+</div>
+<div class="row">
+    <div class="col-md-12 text-center">
+        <h1 class="text-center user-login">
+            <i class="fas fa-user"></i>
+        </h1>
+        <p class=" text-dark">@Session["UserName"]</p>
+        @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row pb-5 shadow-card">
+        <h2 class="customer-heading-first-element">العملاء</h2>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4 grid-dropdown  grid-Customer-datiles-table-icon">
+
+                    <div>
+                        <h1 class="text-center Customer-datiles-table-img-icon">
+                            <i class="fas fa-user"></i>
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-md-8 pt-3">
+                    <table class="table Customer-datiles-table">
+                        <tbody>
+                            <tr>
+                                <th scope="row" style=""><i class="fas fa-user" aria-hidden="true"></i></th>
+                                <td>
+                                    @Html.DisplayNameFor(model => model.CustomerSupplierName)
+                                </td>
+                                <td>@Html.DisplayFor(model => model.CustomerSupplierName)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></th>
+                                <td>
+                                    @Html.DisplayNameFor(model => model.DefLocation.LocationName)
+                                </td>
+                                <td>@Html.DisplayFor(model => model.DefLocation.LocationName)</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><i class="fas fa-phone-volume" aria-hidden="true"></i></th>
+                                <td>@Html.DisplayNameFor(model => model.Telephone1)</td>
+                                <td>  @Html.DisplayFor(model => model.Telephone1)</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><i class="fas fa-phone-volume" aria-hidden="true"></i></th>
+                                <td> @Html.DisplayNameFor(model => model.Telephone2)</td>
+                                <td> @Html.DisplayFor(model => model.Telephone2)</td>
+
+                            </tr>
+                            <tr>
+                                <th scope="row"><i class="fas fa-envelope"></i></th>
+                                <td> @Html.DisplayNameFor(model => model.Email)</td>
+                                <td>@Html.DisplayFor(model => model.Email)</td>
+
+                            </tr>
+
+                            <tr>
+                                <th scope="row"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></th>
+                                <td>@Html.DisplayNameFor(model => model.Address)</td>
+                                <td>@Html.DisplayNameFor(model => model.Address)</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*
+
+    <div class="container">
+        <dl class="dl-horizontal">
+
+
+
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerSupplierName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.CustomerSupplierName)
+            </dd>
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DefLocation.LocationName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DefLocation.LocationName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Telephone1)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Telephone1)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Telephone2)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Telephone2)
+            </dd>
+
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+
+            <dd>
+               @Html.DisplayNameFor(model => model.Address)
+            </dd>
+        </dl>
+    </div>
+*@

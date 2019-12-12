@@ -35,7 +35,12 @@
                                     <td>
                                         كود العميل
                                     </td>
-                                    <td>@Html.DisplayFor(modelItem => item.CustomerSupplierCode)</td>
+                                    <td>
+                                        <div style="display:none">
+                                            @Html.DisplayFor(modelItem => item.ArApCustomerSupplierID)
+                                        </div>
+                                        @Html.DisplayFor(modelItem => item.CustomerSupplierCode)
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th scope="row"><i class="fas fa-user" aria-hidden="true"></i></th>
@@ -71,36 +76,41 @@
                             </tbody>
                         </table>
                         @* <ul style="list-style-type: none;
-                        font-size: 1.5rem;
-                        border-left: 5px solid #ccc;
-                        padding-left: 1rem;">
+            font-size: 1.5rem;
+            border-left: 5px solid #ccc;
+            padding-left: 1rem;">
 
-                                                <li>
-                                                    <i class="fas fa-id-card-alt"></i> كود العميل : @Html.DisplayFor(modelItem => item.CustomerSupplierCode)
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-user"></i> اسم العميل :  @Html.DisplayFor(modelItem => item.CustomerSupplierName)
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-map-marker-alt"></i> العنوان : @Html.DisplayFor(modelItem => item.Address)
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-phone-volume"></i> جوال 1 : @Html.DisplayFor(modelItem => item.Telephone1)
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-phone-volume"></i> جوال 2 : @Html.DisplayFor(modelItem => item.Telephone2)
-                                                </li>
-                                                <li>
-                                                    <i class="fas fa-city"></i> المدينه : @Html.DisplayFor(modelItem => item.DefLocation.LocationName)
-                                                </li>
-                                            </ul>*@
+                                    <li>
+                                        <i class="fas fa-id-card-alt"></i> كود العميل : @Html.DisplayFor(modelItem => item.CustomerSupplierCode)
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-user"></i> اسم العميل :  @Html.DisplayFor(modelItem => item.CustomerSupplierName)
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i> العنوان : @Html.DisplayFor(modelItem => item.Address)
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-volume"></i> جوال 1 : @Html.DisplayFor(modelItem => item.Telephone1)
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-volume"></i> جوال 2 : @Html.DisplayFor(modelItem => item.Telephone2)
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-city"></i> المدينه : @Html.DisplayFor(modelItem => item.DefLocation.LocationName)
+                                    </li>
+                                </ul>*@
+                <div class="main-btn-gradinte">
+                    @Html.ActionLink("بحث", "Search")
+                    @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps", new { id = item.ArApCustomerSupplierID },null)
+                 
+                </div>
                     }
                 </div>
 
-                <div class="main-btn-gradinte">
+                @*<div class="main-btn-gradinte">
                     @Html.ActionLink("بحث", "Search")
-                    @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps")
-                </div>
+                    @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps", new { id=item.ArApCustomerSupplierID })
+                </div>*@
             </div>
         </div>
     </div>

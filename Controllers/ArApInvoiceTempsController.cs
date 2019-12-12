@@ -275,7 +275,17 @@ namespace EdgeMobile.Controllers
         // GET: ArApInvoiceTemps/Create
         public ActionResult Create()
         {
-            ViewBag.ArApCustomerSupplierID = new SelectList(db.Customer, "ArApCustomerSupplierID", "CustomerSupplierName");
+            try
+            {
+                int param1 =int.Parse(RouteData.Values["id"].ToString());//this.Request.QueryString["id"];
+                ViewBag.ArApCustomerSupplierID = new SelectList(db.Customer, "ArApCustomerSupplierID", "CustomerSupplierName", param1);
+            }
+            catch
+            {
+                ViewBag.ArApCustomerSupplierID = new SelectList(db.Customer, "ArApCustomerSupplierID", "CustomerSupplierName");
+            }
+
+           // ViewBag.ArApCustomerSupplierID = new SelectList(db.Customer, "ArApCustomerSupplierID", "CustomerSupplierName");
            // ViewBag.ArApCustomerSupplierID = new SelectList(db.Delegates, "ArApCustomerSupplierID", "CustomerSupplierName");
             ViewBag.DefBranchID = new SelectList(db.Branches, "DefBranchID", "BranchName");
             ViewBag.DefCurrencyID = new SelectList(db.DefCurrencies, "DefCurrencyID", "CurrencyName");

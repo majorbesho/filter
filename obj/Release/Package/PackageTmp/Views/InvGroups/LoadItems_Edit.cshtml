@@ -59,11 +59,11 @@
                                 <table class="table">
                                     <thead style="background-color:#ccc;">
                                         <tr>
-                                            <th class="text-center" scope="col">Type Code</th>
-                                            <th class="text-center" scope="col">Type Name</th>
-                                            <th class="text-center" scope="col">Unit</th>
-                                            <th class="text-center" scope="col">Amount</th>
-                                            <th class="text-center" scope="col">Price</th>
+                                            <th class="text-center" scope="col" style="display:none">الكود</th>
+                                            <th class="text-center" scope="col">الصنف</th>
+                                            <th class="text-center" scope="col">الوحدة</th>
+                                            <th class="text-center" scope="col">الكمية</th>
+                                            <th class="text-center" scope="col">السعر</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -72,7 +72,7 @@
                                             <tr>
                                                 <th scope="row">
                                                     <img src="~/img/product.png" style="width:25%;" />
-                                                    @Html.DisplayFor(modelItem => item.ItemCode)
+                                                    @Html.DisplayFor(modelItem => item.ItemCode, new { @style = "display:none" })
                                                     @Html.TextBox("ItemCode", item.ItemCode, new { @style = "display:none" })
                                                     @Html.TextBox("InvItemStoreID", item.InvItemStoreID, new { @style = "display:none" })
                                                     @Html.TextBox("ItemName", item.ItemName, new { @style = "display:none" })

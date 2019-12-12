@@ -34,23 +34,21 @@
             <th>
                 @*@Html.LabelFor(model => model.ArApInvoiceID, htmlAttributes: new { @class = "control-label col-md-2" })*@
 
-                <label>كود العميل</label>
-            </th>
-            <th>
+                <label>العميل </label>
+            
                 @*@Html.DisplayNameFor(model => model.CustomerSupplierName)*@
-                <label>اسم العميل</label>
+                @*<label>اسم العميل</label>*@
             </th>
-            <th>
-                @*@Html.DisplayNameFor(model => model.Address)*@
+            @*<th>
+              
                 <label>العنوان</label>
-            </th>
+            </th>*@
             <th>
                 @*@Html.DisplayNameFor(model => model.Telephone1)*@
-                <label>الجوال 1</label>
-            </th>
-            <th>
+                <label>الجوال </label>
+           
                 @*@Html.DisplayNameFor(model => model.Telephone2)*@
-                <label>الجوال 2</label>
+                @*<label>الجوال 2</label>*@
             </th>
             <th></th>
         </tr>
@@ -61,17 +59,15 @@
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.CustomerSupplierCode)
-                    </td>
-                    <td>
+                  -
                         @Html.DisplayFor(modelItem => item.CustomerSupplierName)
                     </td>
-                    <td>
+                    @*<td>
                         @Html.DisplayFor(modelItem => item.Address)
-                    </td>
+                    </td>*@
                     <td>
                         @Html.DisplayFor(modelItem => item.Telephone1)
-                    </td>
-                    <td>
+                  -
                         @Html.DisplayFor(modelItem => item.Telephone2)
                     </td>
                     <td>

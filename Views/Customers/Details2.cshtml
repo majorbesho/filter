@@ -33,6 +33,7 @@
                                 <th scope="row" style=""><i class="fas fa-user" aria-hidden="true"></i></th>
                                 <td>
                                     @Html.DisplayNameFor(model => model.CustomerSupplierName)
+                                    @*<input type="text" value='@Html.DisplayNameFor(model => model.ArApCustomerSupplierID)' id="cust"></input>*@
                                 </td>
                                 <td>@Html.DisplayFor(model => model.CustomerSupplierName)</td>
                             </tr>
@@ -72,8 +73,12 @@
 
 
                         </tbody>
-                    </table>
+                        <div class="main-btn-gradinte">
+                            @Html.ActionLink("بحث", "Search")
+                            @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps", new { id = Model.ArApCustomerSupplierID }, null)
 
+                        </div>
+                    </table>
                 </div>
             </div>
         </div>

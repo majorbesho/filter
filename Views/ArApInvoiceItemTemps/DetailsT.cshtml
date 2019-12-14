@@ -17,94 +17,97 @@
 @*<p>
         @Html.ActionLink("Create New", "Create")
     </p>*@
-<table class="table dir" @*style="direction:rtl"*@>
-    <tr class="table-tbody-invoice" style="background-color:ButtonFace; font-weight: bold;">
+<div class="table-responsive table-responsive-detiels-edite">
+    <table class="table dir" @*style="direction:rtl"*@>
+        <tr class="table-tbody-invoice" style="background-color:ButtonFace; font-weight: bold;">
 
-        @*<th>
-            @Html.DisplayNameFor(model => model.invItem.ItemCode)
-        </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.invItem.ItemCode)
+                </th>*@
 
-        @*<th>
-            @Html.DisplayNameFor(model => model.invUnit.UnitName)
-        </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.invUnit.UnitName)
+                </th>*@
 
-        <th style="text-align-last:right; background-color:ButtonFace; font-weight: bold; display:none;">
-            @Html.DisplayNameFor(model => model.ItemCode)
-        </th>
-        <th style="text-align-last:right ; background-color:ButtonFace; font-weight: bold;">
-            @Html.DisplayNameFor(model => model.ItemName)
-        </th>
-        <th style="text-align-last:right ; background-color:ButtonFace; font-weight: bold;">
-            @Html.DisplayNameFor(model => model.invGroup.GroupName)
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.UnitName)
-        </th>*@
-        <th style="text-align-last:right ; background-color:ButtonFace; font-weight: bold;">
-            @Html.DisplayNameFor(model => model.Quantity)
-        </th>
-        <th style="text-align-last:right ; background-color:ButtonFace; font-weight: bold;">
-            @Html.DisplayNameFor(model => model.SellingPrice)
-        </th>
-        <th style="text-align-last:right ; background-color:ButtonFace; font-weight: bold;">
-            @Html.DisplayNameFor(model => model.Netprice)
-        </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.GroupName)
-        </th>*@
-       
-    </tr>
+            <th style="text-align-last:right; background-color:ButtonFace; font-weight: bold; display:none;">
+                @Html.DisplayNameFor(model => model.ItemCode)
+            </th>
+            <th style="text-align-last:right ; background-color:ButtonFace; font-weight: bold;">
+                @Html.DisplayNameFor(model => model.ItemName)
+            </th>
+            <th style="text-align-last:right ; background-color:ButtonFace; font-weight: bold;">
+                @Html.DisplayNameFor(model => model.invGroup.GroupName)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.UnitName)
+                </th>*@
+            <th style="text-align-last:right ; background-color:ButtonFace; font-weight: bold;">
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th style="text-align-last:right ; background-color:ButtonFace; font-weight: bold;">
+                @Html.DisplayNameFor(model => model.SellingPrice)
+            </th>
+            <th style="text-align-last:right ; background-color:ButtonFace; font-weight: bold;">
+                @Html.DisplayNameFor(model => model.Netprice)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.GroupName)
+                </th>*@
 
-    @foreach (var group in Model.GroupBy(x => x.GroupName))
-    {
-<tr class="group-header table-tr-invoice-edite" style="display:none">
-    <td colspan="6">
-        <span class="h3">@group.Key</span>
-    </td>
-</tr>
-        foreach (var item in group)
+        </tr>
+
+        @foreach (var group in Model.GroupBy(x => x.GroupName))
         {
-<tr class="table-incovoice-edite-tbody">
+            <tr class="group-header table-tr-invoice-edite" style="display:none">
+                <td colspan="6">
+                    <span class="h3">@group.Key</span>
+                </td>
+            </tr>
+            foreach (var item in group)
+            {
+                <tr class="table-incovoice-edite-tbody">
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.ItemCode)
-        </td>*@
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.ItemCode)
+                        </td>*@
 
-    @*<td>
-            @Html.DisplayFor(modelItem => item.UnitName)
-        </td>*@
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.UnitName)
+                        </td>*@
 
-    <td style="display:none">
-        @Html.DisplayFor(modelItem => item.ItemCode)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.ItemName)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.GroupName)
-    </td>
-    @*<td>
-        @Html.DisplayFor(modelItem => item.UnitName)
-    </td>*@
-    <td>
-        @Html.DisplayFor(modelItem => item.Quantity)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.SellingPrice)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Netprice)
-    </td>
-    @*<td>
-            @Html.DisplayFor(modelItem => item.GroupName)
-        </td>*@
-    @*<td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-        </td>*@
-</tr>
+                    <td style="display:none">
+                        @Html.DisplayFor(modelItem => item.ItemCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ItemName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.GroupName)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.UnitName)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SellingPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Netprice)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.GroupName)
+                        </td>*@
+                    @*<td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                        </td>*@
+                </tr>
+            }
         }
-    }
 
-</table>
+    </table>
+</div>
+

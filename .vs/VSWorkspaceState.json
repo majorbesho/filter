@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Views",
+    "\\Views\\ArApInvoiceTemps",
+    "\\Views\\Home"
   ],
+  "SelectedNode": "\\Views\\ArApInvoiceTemps\\Edit.cshtml",
   "PreviewInSolutionExplorer": false
 }

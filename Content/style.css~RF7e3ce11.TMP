@@ -1219,25 +1219,12 @@ table.dir {
         background: linear-gradient(to left,#1e2080, #266bd2fa);
         text-decoration: none;
     }
-/* STart edite-heading-table-index*/
-.edite-heading-table-index-body {
-    background-color: #0000004d;
-    font-size: large;
-    height: 5rem;
-}
-.edite-heading-table-index-header {
-    background-color: black;
-    height: 9rem;
-}
-.edite-heading-table-index-header th{
-    border:1px solid #ccc;
-}
-/* End edite-heading-table-index*/
-/* End Main Button*/
+    /* End Main Button*/
 footer {
-    position: absolute;
+    position: relative;
     width: 100%;
     bottom: 0;
+    padding-top: 1rem;
 }
 
     footer p {
@@ -1308,11 +1295,6 @@ footer {
 .category-card-link{
     left:45%;
 }
-.loaditems-grid {
-    height: 21rem;
-    overflow: scroll;
-    padding: 3px;
-}
 /* End responsive in pc*/
 /* ANIMATIONS Form ================ */
 @-webkit-keyframes inputHighlighter {
@@ -1370,13 +1352,7 @@ footer {
         left: 40%;
     }
     .invoice-template-pc{
-        margin-top:5rem;
-    }
-    .loaditems-grid {
-        height: 72rem;
-    }
-    .table-responsive-detiels-edite {
-        overflow-x: inherit!important;
+        margin-top:13rem;
     }
 }
 @media(min-width:1200px) and (max-width:1366px) {

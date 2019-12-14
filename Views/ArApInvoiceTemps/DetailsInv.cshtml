@@ -7,9 +7,9 @@
 
     <div class="row" style="justify-content:center;display:flex;width:100%;">
         <div class="col-md-12 text-center">
-            <h1 class="text-center user-login">
+            <h3 class="text-center user-login">
                 <i class="fas fa-user"></i>
-            </h1>
+            </h3>
             <p class=" text-dark">@Session["UserName"]</p>
             @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
             @*<p class=" text-dark">User Login</p>*@

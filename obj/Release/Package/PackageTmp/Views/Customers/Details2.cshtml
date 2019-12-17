@@ -4,6 +4,35 @@
     ViewBag.Title = "Details2";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+    <div class="container" style="padding-top:.5rem;">
+        <div class="row invoice-template-pc">
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xss-4">
+                <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xss-4 text-center">
+                <h3 class="text-center user-login">
+                    <i class="fas fa-user"></i>
+                </h3>
+                <p class=" text-dark">@Session["UserName"]</p>
+                @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xss-4 text-center">
+                <a class="add-custmoer-link" href="~/Customers/Create"><i class="fas fa-user-plus"></i> </a>
+
+            </div>
+
+        </div>
+        </div>
+
+
+
+    </div>
+
+
+
+@*
 <div class="container" style="padding-top:2rem;">
     <a class="add-custmoer-link" href="~/Customers/Create"><i class="fas fa-user-plus"></i> </a>
     <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
@@ -11,22 +40,22 @@
 </div>
 <div class="row">
     <div class="col-md-12 text-center">
-        <h1 class="text-center user-login">
+        <h3 class="text-center user-login">
             <i class="fas fa-user"></i>
-        </h1>
+        </h3>
         <p class=" text-dark">@Session["UserName"]</p>
         @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
 
     </div>
 </div>
 
-
+*@
 <div class="container">
-    <div class="row pb-5 shadow-card">
+    <div class="row pb-5 shadow-card invoice-template-pc" style="    margin-top: 5rem;">
         <h2 class="customer-heading-first-element">العملاء</h2>
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding:0;">
             <div class="row">
-                <div class="col-md-12 pt-3">
+                <div class=" col-md-12 pt-3">
                     <table class="table Customer-datiles-table">
                         <tbody>
                             <tr>
@@ -73,12 +102,13 @@
 
 
                         </tbody>
-                        <div class="main-btn-gradinte">
-                            @Html.ActionLink("بحث", "Search")
-                            @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps", new { id = Model.ArApCustomerSupplierID }, null)
 
-                        </div>
                     </table>
+                </div>
+                <div class="main-btn-gradinte">
+                    @Html.ActionLink("بحث", "Search")
+                    @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps", new { id = Model.ArApCustomerSupplierID }, null)
+
                 </div>
             </div>
         </div>

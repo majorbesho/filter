@@ -5,28 +5,37 @@
     ViewBag.Title = "IndexbyUserIDP";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="container" style="padding-top:1rem;">
-    <a class="add-custmoer-link" href="~/Customers/Create"><i class="fas fa-user-plus"></i> </a>
-    <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+    <div class="container" style="padding-top:.5rem;">
+        
+        <div class="row invoice-template-pc" style="justify-content:center;display:flex;">
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xss-4">
+                <a class="add-custmoer-link text-center" href="~/Customers/Create"><i class="fas fa-user-plus"></i> </a>
+            </div>
+            <div class="col-md-12 text-center">
+                <h3 class="text-center user-login">
+                    <i class="fas fa-user"></i>
+                </h3>
+                <p class=" text-dark">@Session["UserName"]</p>
+                @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+                @*<p class=" text-dark">User Login</p>*@
+                @Html.TextBox("ArApInvoiceID", @Session["ArApInvoiceID"], new { @style = "display:none" })
 
-</div>
-<div class="row" style="justify-content:center;display:flex;width:100%;">
-    <div class="col-md-12 text-center">
-        <h1 class="text-center user-login">
-            <i class="fas fa-user"></i>
-        </h1>
-        <p class=" text-dark">@Session["UserName"]</p>
-        @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
-        @*<p class=" text-dark">User Login</p>*@
-        @Html.TextBox("ArApInvoiceID", @Session["ArApInvoiceID"], new { @style = "display:none" })
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xss-4">
+                <a class="add-custmoer-link text-center" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+            </div>
+        </div>
+
+
+
     </div>
-</div>
-<h2 style="text-align-last:center">العملاء</h2>
+
+<h2  style="text-align-last:center;">العملاء</h2>
 @*<p>
         @Html.ActionLink("Create New", "Create")
     </p>*@
 
-<div style="width:100%;overflow:scroll;">
+<div class="table-responsive invoice-template-pc" style="width:100%;overflow:scroll;height:30rem;">
     <table class="table dir" @*style="width:50%; margin:auto; "*@>
 
 
@@ -150,7 +159,7 @@
 </div>
 <div class="container">
     <div class="row" style="display:flex;justify-content:center;">
-        <div class="col-md-2 main-btn-gradinte">
+        <div class="col-md-1 main-btn-gradinte">
             @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps")
         </div>
     </div>

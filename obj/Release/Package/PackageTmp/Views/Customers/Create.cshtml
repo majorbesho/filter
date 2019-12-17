@@ -6,22 +6,30 @@
 }
     
     
-<div class="container" style="padding-top:3rem;">
-    <a class="add-custmoer-link" href="~/Customers/search"><i class="fas fa-search"></i> </a>
-    <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
-    @*@Html.ActionLink("عميل جديد", "Create")*@
-</div>
-<div class="row" style="justify-content:center;display:flex;width:100%;">
-    <div class="col-md-12 text-center">
-        <h1 class="text-center user-login">
-            <i class="fas fa-user"></i>
-        </h1>
-        <p class=" text-dark">@Session["UserName"]</p>
-        @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
-        @*<p class=" text-dark">User Login</p>*@
-        @*@Html.TextBox("ArApInvoiceID", @Session["ArApInvoiceID"], new { @style = "display:none" })*@
+    <div class="container" style="padding-top:.5rem;">
+        
+        <div class="row invoice-template-pc" style="justify-content:center;display:flex;width:100%;margin-right:0;">
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xxs-4">
+                <a class="add-custmoer-link" href="~/Customers/search"><i class="fas fa-search"></i> </a>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xxs-4 text-center">
+                <h3 class="text-center user-login">
+                    <i class="fas fa-user"></i>
+                </h3>
+                <p style="margin-bottom:0;" class=" text-dark">@Session["UserName"]</p>
+                @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+                @*<p class=" text-dark">User Login</p>*@
+                @*@Html.TextBox("ArApInvoiceID", @Session["ArApInvoiceID"], new { @style = "display:none" })*@
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xxs-4">
+                <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+            </div>
+        </div>
+
+        
+        @*@Html.ActionLink("عميل جديد", "Create")*@
     </div>
-</div>
+    
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -29,16 +37,16 @@
 
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="container">
-        <div class="row pb-5"  style="justify-content:center;display:flex;">
+        <div class="row pb-5 invoice-template-pc"  style="justify-content:center;display:flex;">
             @*<h1 class="text-center" style="margin-bottom:4rem;">بيانات العميل</h1>*@
-            <div class="col-md-8 col-sm-10 col-xs-10 col-xxs-10">
+            <div class="col-md-12 col-sm-10 col-xs-10 col-xxs-10">
                 <div class="row shadow-full-grid">
 
                     @*  <div class="col-md-12 card-img-slide">
         <img src="~/img/creat-customer-background-slide.jpg" alt="Avatar">
                 </div>*@
                     <div class="col-md-12 pt-3 creat-customer-shadow-form">
-                        <h1 class="text-center">بيانات العميل</h1>
+                        <h1 style="margin-bottom:0;margin-top:1px;" class="text-center">بيانات العميل</h1>
                         <form>
                             <div class="row media-query-input" style="display:flex;">
                                 <div class="col-md-3 col-sm-3 col-xs-3">
@@ -154,7 +162,7 @@
 
                         </form>
                         <div class="row form-btn" style="display:flex;justify-content:center;">
-                            <div class="col-md-2 form-btn-body">
+                            <div class="col-md-1 form-btn-body">
                                 <div class="form-group">
                                     <div class="main-btn-gradinte">
                                         @*<i class="fas fa-save"></i>*@

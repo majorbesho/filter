@@ -165,7 +165,9 @@ img.edite-postion-pic-category {
     padding-bottom: 0;
     padding-top: 0;
 }
-
+.image-login{
+    width:100%;
+}
 .wrapper.form-success .form-card h1 {
     -webkit-transform: translateY(85px);
     transform: translateY(85px);
@@ -187,7 +189,7 @@ img.edite-postion-pic-category {
     }
 
 .login-card form {
-    padding: 20px 0;
+    padding: 20px 20px;
     position: relative;
     z-index: 2;
 }
@@ -483,13 +485,38 @@ a:hover {
     text-decoration: none;
 }
 /* Start category Grid */
-.category-card {
-    font-family: cursive;
-    background-color: transparent;
-    width: 100%;
-    height: 300px;
-    perspective: 1000px;
+.background-category {
+    position: relative;
+    height: 100%;
 }
+.img-category-bg-color {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #00000075;
+}
+.card-category-contnet {
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    right: 15px;
+    left: 0;
+    top: 17%;
+    bottom: 50%;
+    width: 100%;
+}
+ .card-category-contnet div p{
+        color:white!important;
+    }
+    .category-card {
+        font-family: cursive;
+        background-color: transparent;
+        width: 100%;
+        height: 18rem;
+        perspective: 1000px;
+        margin-bottom:1rem;
+    }
 
 .category-card-detiles {
     position: relative;
@@ -525,7 +552,7 @@ a:hover {
 }
 
 .top-first-child {
-    top: 22%;
+    top: 12%;
 }
 
 .top-seconed-and-third-child {
@@ -535,7 +562,7 @@ a:hover {
 .category-card-link {
     position: absolute;
     bottom: 8%;
-    left: 40%;
+    left: 45%;
     color: #17a2b8;
     border-color: 1px solid #17a2b8;
     border: 1px solid;
@@ -576,13 +603,14 @@ a:hover {
     }
 
 .category-card-title {
-    color: #e65f4d;
+    color: #ff1e00;
 }
 /* End category Grid */
 /* Style the tab */
 
 .tab {
     overflow: hidden;
+    margin-bottom:0;
 }
 
     .tab li {
@@ -594,6 +622,7 @@ a:hover {
         transition: 0.3s;
         font-size: 17px;
         list-style-type: none;
+        margin-bottom:0;
     }
 
         .tab li:hover {
@@ -611,7 +640,7 @@ a:hover {
 
 .tabmenucontent {
     display: none;
-    padding: 6px 12px;
+    padding: 0;
 }
 
 /* End tbs */
@@ -620,6 +649,13 @@ table, thead , tbody{
     border-top:0;
 
 }
+table tbody tr td {
+    text-align:center;
+}
+    table tbody tr td input {
+        width:5rem!important;
+        padding: 2px 3px!important;
+    }
 .table-invoice-edite {
     border-bottom: 5px solid #ccc;
     margin-bottom: 14px;
@@ -747,11 +783,14 @@ table, thead , tbody{
     font-size: 17rem;
     margin-top: 0;
 }
-.user-login{
-    font-size: 7rem;
+.user-login {
+    margin: 0 auto auto auto;
+}
+user-login-creat-invoice-p-h1{
+    margin-bottom:0;
 }
 .user-login-creat-invoice {
-    color:white;
+    color: white;
 }
 .Customer-datiles-table {
     border-right: 5px solid #CCC;
@@ -849,8 +888,7 @@ table, thead , tbody{
 }
     */
 .form-btn .form-btn-body {
-
-padding-top:1rem;
+    /*padding-top:1rem;*/
 }
     .form-btn .form-btn-body button {
     padding: .5rem 2rem .5rem 2rem;
@@ -867,7 +905,7 @@ padding-top:1rem;
 
 .main-input {
     font-size: 18px;
-    padding: 10px 10px 10px 5px;
+    padding: 6px 10px 10px 5px;
     display: block;
     width: 100%;
     border: none;
@@ -953,7 +991,7 @@ padding-top:1rem;
 }
 
 .lable-static {
-    margin-bottom: 1rem;
+    /*margin-bottom: 1rem;*/
     font-size: 2rem;
     color: #5264AE;
 }
@@ -968,9 +1006,11 @@ padding-top:1rem;
     text-align: right;
     font-size: 152%;
 }
-.checkbox-sizing{
-    font-size:2.5rem;
-    
+.lable-content-invoice{
+    line-height:2.2;
+}
+.checkbox-sizing {
+    font-size: 2.5rem;
 }
     .checkbox-sizing input[type="radio"], .checkbox-sizing input[type="checkbox"] {
         width: 2rem;
@@ -1136,54 +1176,75 @@ table.dir {
         /*End creat Invoice */
 
         /* Strat Main Button*/
-
-.main-btn-gradinte a, .main-btn-gradinte button, .main-btn-gradinte input {
-    background: linear-gradient(to right,#1e2080, #266bd2fa);
-    color: white;
-    padding: 1.3rem 1rem 1.3rem 1rem;
-    border: 0;
-    border-radius: .3rem;
-    margin-top: 2rem;
-    font-size: 1.6rem;
-    font-weight: bold;
-    width: 14rem;
-    text-align:center;
+.main-btn-gradinte{
+    padding:0;
 }
-    .main-btn-gradinte a:first-of-type{
+    .main-btn-gradinte a:not(.close), .main-btn-gradinte button:not(.close), .main-btn-gradinte input {
+        background: linear-gradient(to right,#1e2080, #266bd2fa);
+        color: white;
+        padding: 12px 9px;
+        border: 0;
+        border-radius: .3rem;
+        margin-top: 1rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        min-width: 7rem;
+        text-align: center;
+    }
+    .main-btn-gradinte a:first-of-type:not(.close) {
         float: right;
     }
-    .main-btn-gradinte a:nth-of-type(2) {
+    .main-btn-gradinte a:nth-of-type(2):not(.close) {
         float: right;
         margin-right: 2rem;
     }
-    .main-btn-gradinte a:last-of-type{
+    .main-btn-gradinte a:last-of-type:not(.close) {
         float: left;
     }
-    .main-btn-gradinte a:hover, .main-btn-gradinte button:hover, .main-btn-gradinte input:hover {
+    .main-btn-gradinte a:hover:not(.close), .main-btn-gradinte button:hover:not(.close), .main-btn-gradinte input:hover {
         background: linear-gradient(to left,#1e2080, #266bd2fa);
         transition-duration: .7s;
         transition-delay: .9s;
         text-decoration: none;
     }
-    .main-btn-gradinte a:foucs, .main-btn-gradinte button:foucs, .main-btn-gradinte input:foucs {
+    .main-btn-gradinte a:foucs:not(.close), .main-btn-gradinte button:foucs:not(.close), .main-btn-gradinte input:foucs {
         background: linear-gradient(to left,#1e2080, #266bd2fa);
         text-decoration: none;
     }
-    .main-btn-gradinte a:active .main-btn-gradinte button:active, .main-btn-gradinte input:active {
+    .main-btn-gradinte a:active:not(.close) .main-btn-gradinte button:active:not(.close), .main-btn-gradinte input:active {
         background: linear-gradient(to left,#1e2080, #266bd2fa);
         text-decoration: none;
     }
-    .main-btn-gradinte a:visited {
+    .main-btn-gradinte a:visited:not(.close) {
         background: linear-gradient(to left,#1e2080, #266bd2fa);
         text-decoration: none;
     }
-    /* End Main Button*/
-        footer {
+/* STart edite-heading-table-index*/
+.edite-heading-table-index-body {
+    background-color: #0000004d;
+    font-size: large;
+    height: 5rem;
+}
+.edite-heading-table-index-header {
+    background-color: black;
+    height: 9rem;
+}
+.edite-heading-table-index-header th{
+    border:1px solid #ccc;
+}
+/* End edite-heading-table-index*/
+/* End Main Button*/
+footer {
     position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
     footer p {
         text-align: center;
+        position: absolute;
+        right: 0;
+        left: 0;
     }
 
 @-webkit-keyframes square {
@@ -1231,6 +1292,28 @@ table.dir {
         -webkit-transform: scaleY(1.0);
     }
 }
+/* Stat responsive in pc*/
+.category-card-front-img{
+    height:18rem;
+}
+.category-img-card{
+    height:18rem;
+}
+.card-category-contnet-responsive-pc{
+    display:none;
+}
+.card-category-contnet {
+    display: block;
+}
+.category-card-link{
+    left:45%;
+}
+.loaditems-grid {
+    height: 21rem;
+    overflow: scroll;
+    padding: 3px;
+}
+/* End responsive in pc*/
 /* ANIMATIONS Form ================ */
 @-webkit-keyframes inputHighlighter {
     from {
@@ -1264,7 +1347,38 @@ table.dir {
         background: transparent;
     }
 }
-
+@media(min-width:992px) {
+    .category-card-front-img {
+        height: 25rem;
+    }
+    .img-category-bg-color{
+        display:none;
+    }
+    .category-img-card{
+        height:14rem;
+    }
+    .card-category-contnet-responsive-pc{
+        display:block;
+    }
+    .card-category-contnet {
+        display:none;
+    }
+    .top-first-child{
+        top:22%;
+    }
+    .category-card-link {
+        left: 40%;
+    }
+    .invoice-template-pc{
+        margin-top:5rem;
+    }
+    .loaditems-grid {
+        height: 72rem;
+    }
+    .table-responsive-detiels-edite {
+        overflow-x: inherit!important;
+    }
+}
 @media(min-width:1200px) and (max-width:1366px) {
     #button-pill {
         width: 100%;

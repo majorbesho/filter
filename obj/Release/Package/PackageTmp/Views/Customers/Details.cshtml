@@ -1,30 +1,38 @@
 ﻿@model IEnumerable<EdgeMobile.Models.Customer>
-    <div class="container" style="padding-top:2rem;">
-        <a class="add-custmoer-link" href="~/Customers/Create"><i class="fas fa-user-plus"></i> </a>
-        <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
 
-    </div>
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h1 class="text-center user-login">
-                <i class="fas fa-user"></i>
-            </h1>
-            <p class=" text-dark">@Session["UserName"]</p>
-            @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+
+
+
+
+
+    <div class="container" style="padding-top:.5rem;">
+        <div class="row invoice-template-pc">
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xss-4">
+                <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xss-4text-center">
+                <h3 class="text-center user-login">
+                    <i class="fas fa-user"></i>
+                </h3>
+                <p class=" text-dark text-center">@Session["UserName"]</p>
+                @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xss-4 text-center">
+                <a class="add-custmoer-link" href="~/Customers/Create"><i class="fas fa-user-plus"></i> </a>
+
+            </div>
 
         </div>
-    </div>
-
-
-
-
+        </div>
 
 <div class="container">
-    <div class="row pb-5 shadow-card">
+    <div class="row pb-5 shadow-card invoice-template-pc" style="margin-top: 5rem;">
         <h2 class="customer-heading-first-element" style="">العملاء</h2>
-        <div class="col-md-12">
+        <div class="col-md-12" style="padding:0;">
             <div class="row">
-                <div class="col-md-12 pt-3">
+                <div class="col-md-12 " style="padding:0;">
                     @foreach (var item in Model)
                     {
 
@@ -99,18 +107,19 @@
                                         <i class="fas fa-city"></i> المدينه : @Html.DisplayFor(modelItem => item.DefLocation.LocationName)
                                     </li>
                                 </ul>*@
-                <div class="main-btn-gradinte">
-                    @Html.ActionLink("بحث", "Search")
-                    @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps", new { id = item.ArApCustomerSupplierID },null)
-                 
-                </div>
-                    }
-                </div>
+                        <div class="main-btn-gradinte">
+                            @Html.ActionLink("بحث", "Search")
+                            @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps", new { id = item.ArApCustomerSupplierID }, null)
 
+                        </div> 
+                    }
+
+                </div>
+                
                 @*<div class="main-btn-gradinte">
-                    @Html.ActionLink("بحث", "Search")
-                    @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps", new { id=item.ArApCustomerSupplierID })
-                </div>*@
+            @Html.ActionLink("بحث", "Search")
+            @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps", new { id=item.ArApCustomerSupplierID })
+        </div>*@
             </div>
         </div>
     </div>

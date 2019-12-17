@@ -4,24 +4,25 @@
     ViewBag.Title = "LoadItems";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <div class="container" style="padding-top:2rem;">
-        
-        <div>
-            <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
-            <h3 class="text-center user-login">
-                <i class="fas fa-user"></i>
-            </h3>
-            <p class=" text-dark text-center">@Session["UserName"]</p>
-            @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
-            @*<p class=" text-dark">User Login</p>*@
-            @Html.TextBox("InvoiceCode", @Session["InvoiceCode"], new { @style = "display:none" })
-        </div>
+<div class="container" style="padding-top:2rem;">
+
+    <div>
+        <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+        <h3 class="text-center user-login">
+            <i class="fas fa-user"></i>
+        </h3>
 
     </div>
+
+</div>
 @*<h2>LoadItems</h2>*@
 
 @using (Html.BeginForm("LoadItems", "InvGroups", FormMethod.Post))
 {
+    @*<p class=" text-dark text-center">@Session["UserName"]</p>*@
+    @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+    @*<p class=" text-dark">User Login</p>*@
+    @Html.TextBox("InvoiceCode", @Session["InvoiceCode"], new { @style = "display:none" })
 
     <div class="container">
         <div class="row">
@@ -61,7 +62,7 @@
                                         @foreach (var item in group)
                                         {
                                             <tr>
-                                                <th scope="row" >
+                                                <th scope="row">
                                                     <img src="~/img/product.png" style="width:25%;" />
                                                     @Html.DisplayFor(modelItem => item.ItemCode)
                                                     @Html.TextBox("ItemCode", item.ItemCode, new { @style = "display:none" })

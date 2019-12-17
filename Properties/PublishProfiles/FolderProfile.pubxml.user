@@ -85,10 +85,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2019 10:56:12</publishTime>
     </File>
     <File Include="bin/EdgeMobile.dll">
-      <publishTime>12/12/2019 16:31:05</publishTime>
+      <publishTime>12/15/2019 11:47:20</publishTime>
     </File>
     <File Include="bin/EdgeMobile.pdb">
-      <publishTime>12/12/2019 16:31:05</publishTime>
+      <publishTime>12/15/2019 11:47:20</publishTime>
     </File>
     <File Include="bin/el-GR/Kendo.Mvc.resources.dll">
       <publishTime>06/19/2019 02:50:26</publishTime>
@@ -1822,7 +1822,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Content/style.css">
-      <publishTime>12/11/2019 16:36:04</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>12/10/2019 10:56:10</publishTime>
@@ -13099,31 +13099,31 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Views/ArApInvoiceItemTemps/DetailsT.cshtml">
-      <publishTime>12/11/2019 18:02:56</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/ArApInvoiceItemTemps/Edit.cshtml">
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Views/ArApInvoiceItemTemps/Index.cshtml">
-      <publishTime>12/10/2019 10:56:09</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/ArApInvoiceTemps/Create.cshtml">
-      <publishTime>12/11/2019 11:45:58</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/ArApInvoiceTemps/Delete.cshtml">
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Views/ArApInvoiceTemps/DetailsInv.cshtml">
-      <publishTime>12/11/2019 13:37:30</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/ArApInvoiceTemps/Details_Edit.cshtml">
-      <publishTime>12/11/2019 13:37:30</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/ArApInvoiceTemps/Edit.cshtml">
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Views/ArApInvoiceTemps/Index.cshtml">
-      <publishTime>12/11/2019 13:37:30</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/Branches/Create.cshtml">
       <publishTime>12/10/2019 10:56:09</publishTime>
@@ -13141,7 +13141,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Views/Customers/Create.cshtml">
-      <publishTime>12/11/2019 13:37:30</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/Customers/Create2.cshtml">
       <publishTime>12/10/2019 10:56:09</publishTime>
@@ -13150,10 +13150,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Views/Customers/Details.cshtml">
-      <publishTime>12/12/2019 15:57:55</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/Customers/Details2.cshtml">
-      <publishTime>12/12/2019 16:27:05</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/Customers/Edit.cshtml">
       <publishTime>12/10/2019 10:56:09</publishTime>
@@ -13165,16 +13165,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Views/Customers/IndexbyUserIDP.cshtml">
-      <publishTime>12/11/2019 17:48:42</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/Customers/Search.cshtml">
-      <publishTime>12/11/2019 11:05:33</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/Customers/SearchR.cshtml">
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Views/GlCashVoucherCashes/Create.cshtml">
-      <publishTime>12/11/2019 13:37:30</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/GlCashVoucherCashes/Delete.cshtml">
       <publishTime>12/10/2019 10:56:09</publishTime>
@@ -13192,16 +13192,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Views/Home/Cat.cshtml">
-      <publishTime>12/10/2019 19:07:45</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/Home/Cat2.cshtml">
-      <publishTime>12/10/2019 19:08:06</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>12/10/2019 10:56:09</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/InvGroups/Create.cshtml">
       <publishTime>12/10/2019 10:56:09</publishTime>
@@ -13219,7 +13219,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Views/InvGroups/LoadItems.cshtml">
-      <publishTime>12/11/2019 18:01:19</publishTime>
+      <publishTime>12/15/2019 08:42:24</publishTime>
     </File>
     <File Include="Views/InvGroups/LoadItems_Edit.cshtml">
       <publishTime>12/11/2019 18:01:05</publishTime>

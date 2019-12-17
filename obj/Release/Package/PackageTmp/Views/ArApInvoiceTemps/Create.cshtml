@@ -18,33 +18,33 @@
 
 
 
-    <div class="container" style="padding-top:3rem;">
-        <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+    <div class="container" style="padding-top:.5rem;">
+        <div class="row invoice-template-pc" style="
+    margin-left: 1rem;
+    margin-right: 1rem;
+">
+            <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+            <h3 class="text-center user-login">
+                <i class="user-login-creat-invoice-p-h1 fas fa-user"></i>
+            </h3>
+            <p class="user-login-creat-invoice-p-h1 text-center">@Session["UserName"]</p>
+
+            @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+            @*<p class=" text-dark">User Login</p>*@
+            @*@Html.TextBox("InvoiceCode", @Session["InvoiceCode"], new { @style = "display:none" })*@
+        </div>
+        
         @*@Html.ActionLink("عميل جديد", "Create")*@
     </div>
 
    
     <div class="container">
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="row" style="justify-content:center;display:flex;">
-            <div class="col-md-8 col-sm-8 col-xs-8 col-xxs-8" style="">
-                <div class="row" style="background-color:white;box-shadow: 0 4px 20px #ccc;
-    border-radius: .5rem;">
-
-                    <div class="col-md-12 header-creat-invoice">
-                        <div class="row">
-                            <h1 class="text-center user-login text-white">
-                                <i class="user-login-creat-invoice-p-h1 fas fa-user" style="color:white;"></i>
-                            </h1>
-                            <p class="user-login-creat-invoice-p-h1 text-white text-center"style="color:white;">@Session["UserName"]</p>
-
-                            @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
-                            @*<p class=" text-dark">User Login</p>*@
-                            @*@Html.TextBox("InvoiceCode", @Session["InvoiceCode"], new { @style = "display:none" })*@
-                        </div>
-                    </div>
-                    <div class="col-md-12" style="padding:4rem;">
-                        <h1 class="text-center" style="margin-bottom:3rem;"> الفاتورة</h1>
+        <div class="row invoice-template-pc" style="justify-content:center;display:flex;">
+            <div class="col-md-12 col-sm-11 col-xs-11 col-xxs-11" style="">
+                <div class="row" style="background-color: white; box-shadow: 0 4px 20px #ccc; border-radius: .5rem;">
+                    <div class="col-md-12" style="padding: 0rem 3rem 1rem;">
+                        <h1 class="text-center" style="margin-top: 8px;margin-bottom:0;"> الفاتورة</h1>
                         <form>
 
                             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -65,20 +65,20 @@
                             </div>*@
                             <div class="row" style="display:flex;justify-content:center;">
 
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-sm-12 col-xs-12 col-xxs-12">
                                     <div class="row" style="display:flex;justify-content:center;">
-                                        <div class="  col-md-5 col-sm-8 col-xs-8 col-xxs-12">
+                                        <div class="  col-md-5 col-sm-12 col-xs-12 col-xxs-12" style="display:contents;">
                                             @Html.LabelFor(model => model.InvoiceCode, htmlAttributes: new { @class = "lable-header text-center" })
-                                            : @Html.Label("InvoiceCode", (string)ViewBag.InvoiceCode, new { htmlAttributes = new { @class = "text-center ", @Value = (string)ViewBag.InvoiceCode } })
+                                            : @Html.Label("InvoiceCode", (string)ViewBag.InvoiceCode, new { @class = "lable-content-invoice" , htmlAttributes = new { @class = "text-center ", @Value = (string)ViewBag.InvoiceCode } })
                                             @Html.ValidationMessageFor(model => model.InvoiceCode, "", new { @class = "text-danger text-center" })
                                         </div>
                                     </div>
                                     <div class="row"style="display:flex;justify-content:center;">
-                                        <div class="col-md-5 col-sm-8 col-xs-8 col-xxs-12">
+                                        <div class="col-md-5 col-sm-12 col-xs-12 col-xxs-12" style="display:contents;">
 
-                                            @Html.LabelFor(model => model.InvoiceDate, htmlAttributes: new { @class = "lable-header text-center" })
+                                            @Html.LabelFor(model => model.InvoiceDate, htmlAttributes: new { @class = "lable-header text-center"})
                                             :
-                                            @Html.Label("InvoiceDate", (string)ViewBag.InvoiceDate, new { @class = "text-center", @Value = DateTime.Now.ToShortDateString() })
+                                            @Html.Label("InvoiceDate", (string)ViewBag.InvoiceDate, new { @class = "text-center lable-content-invoice", @Value = DateTime.Now.ToShortDateString() })
                                             @Html.ValidationMessageFor(model => model.InvoiceDate, "", new { @class = "text-danger text-center" })
                                         </div>
                                     </div>
@@ -86,8 +86,6 @@
 
 
                             </div>
-                            <br />
-                            <br />
                             @*<div class="row">
                                 <div class="design-main-input validate-input">
                                     @Html.DropDownList("ArApCustomerSupplierID", null, htmlAttributes: new { @class = "main-input" })
@@ -110,7 +108,7 @@
                                 </div>*@ 
                                 @*  @Html.LabelFor(model => model.GroupNameEN, htmlAttributes: new { @class = "control-label" })*@
 
-                                <div class="main-input-group">
+                                <div class="main-input-group" style="    margin-top: 5px;">
                                     @Html.DropDownList("ArApCustomerSupplierID", null, htmlAttributes: new { @class = "main-input" })
                                     @*@Html.DropDownListFor(model => model.ArApCustomerSupplierID, model.SomeSelectList, "Select one...", new { @class = "your-class-here" })*@
                                    
@@ -144,13 +142,13 @@
                                 @Html.LabelFor(model => model.PaymentMethod, "طريقة السداد", htmlAttributes: new { @class = "lable-static" })
                                 <div class="row" style="justify-content: end;
     display: flex;margin-bottom:1rem;">
-                                    <div class="col-md-4">
-                                        <div class="col-md-6 checkbox-sizing">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-xss-12">
+                                        <div class="col-md-6 col-sm-6 col-xs-6 col-xss-6 checkbox-sizing">
                                             @Html.RadioButtonFor(model => model.PaymentMethod, "2", new { @style = "-webkit-appearance: radio", @checked = "checked" })
                                             نقدي
 
                                         </div>
-                                        <div class="col-md-6 checkbox-sizing">
+                                        <div class="col-md-6 col-sm-6 col-xs-6 col-xss-6 checkbox-sizing">
                                             @Html.RadioButtonFor(model => model.PaymentMethod, "1", new { @style = "-webkit-appearance: radio" })
                                             شبكة
 
@@ -164,7 +162,7 @@
                             </div>
                             <div class="row">
 
-                                <div class="main-input-group">
+                                <div class="main-input-group" style="margin-top: -13px;">
                                     @* <span class="focus-main-input" data-placeholder="الفني"></span>*@
                                     @Html.LabelFor(model => model.ArApDelegateID, "الفني", htmlAttributes: new { @class = "lable-static " })<br />
                                     @Html.Label("ArApDelegateID", (string)Session["UserName"], new { htmlAttributes = new { @class = "main-input", @Value = (string)Session["UserName"] } })
@@ -200,24 +198,24 @@
                                 </div>
                             </div>*@
                         <div class="row main-btn-media-query" >
-                            <div class="col-md-4 col-sm-12 col-xs-12 col-xxs-12 media-query-btn-group">
+                            <div class="col-md-4 col-sm-4 col-xs-4 col-xxs-4">
                                 <div class="row" style="justify-content:center;display:flex;">
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12 main-btn-gradinte">
                                         <input type="submit" value="اصناف" class="btn btn-default" />
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-12 col-xs-12 col-xxs-12 media-query-btn-group">
+                            <div class="col-md-4 col-sm-4 col-xs-4 col-xxs-4">
                                 <div class="row" style="justify-content:center;display:flex;">
-                                    <div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12 main-btn-gradinte">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12 main-btn-gradinte" style="justify-content:center;display:flex;">
                                         @Html.ActionLink("الفواتير", "Index", new { @class = "btn btn-default" })
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-12 col-xs-12 col-xxs-12 media-query-btn-group">
+                            <div class="col-md-4 col-sm-4 col-xs-4 col-xxs-4">
                                 <div class="row" style="justify-content:center;display:flex;">
                                     <div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12 main-btn-gradinte">
-                                        @Html.ActionLink("عميل جديد", "Create", "Customers", new { @class = "btn btn-default" })
+                                        @Html.ActionLink("عميل جديد", "Create", "Customers")
                                     </div>
                                 </div>
                             </div>

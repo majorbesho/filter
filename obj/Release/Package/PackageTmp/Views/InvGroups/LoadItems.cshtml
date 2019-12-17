@@ -4,10 +4,20 @@
     ViewBag.Title = "LoadItems";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="container" style="padding-top:2rem;">
-    <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+    <div class="container" style="padding-top:2rem;">
+        
+        <div>
+            <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+            <h3 class="text-center user-login">
+                <i class="fas fa-user"></i>
+            </h3>
+            <p class=" text-dark text-center">@Session["UserName"]</p>
+            @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+            @*<p class=" text-dark">User Login</p>*@
+            @Html.TextBox("InvoiceCode", @Session["InvoiceCode"], new { @style = "display:none" })
+        </div>
 
-</div>
+    </div>
 @*<h2>LoadItems</h2>*@
 
 @using (Html.BeginForm("LoadItems", "InvGroups", FormMethod.Post))
@@ -19,27 +29,10 @@
                 <div class="row" style="    border: 2px solid #ccc;
     border-radius: 22px;
     box-shadow: 11px 17px 22px #ccc;
-    margin-bottom: 2rem;">
-
-
-                    <div class="col-12" style="height: 37rem; position: relative;">
-                        <img src="~/img/items.jpg" alt="Avatar"
-                             style="width:100%;height:100%;">
-                        <div style="position: absolute;
-                                       top: 40%;
-                                       left: 40%;
-                                       color: white;
-                         border-radius: 22px 22px 0 0;"> <div>
-    <h1 class="text-center user-login">
-        <i class="fas fa-user"></i>
-    </h1>
-    <p class=" text-dark text-center">@Session["UserName"]</p>
-    @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
-    @*<p class=" text-dark">User Login</p>*@
-    @Html.TextBox("InvoiceCode", @Session["InvoiceCode"], new { @style = "display:none" })
-</div></div>
-                    </div>
-                    <div class="col-md-4 pt-3" style="padding-left:0;">
+    margin-bottom: 1rem;">
+                    <div class="col-md-4 pt-3" style="padding-left: 0;
+    padding-right: 0;
+    padding-top: 1rem;">
 
                         <ul class="tab">
                             @foreach (var group in Model.GroupBy(m => m.GroupName))
@@ -49,15 +42,15 @@
                         </ul>
 
                     </div>
-                    <div class="col-md-8 pt-3" style="height: 86rem;overflow: scroll;">
+                    <div class="col-md-8 pt-3 loaditems-grid">
                         @foreach (var group in Model.GroupBy(m => m.GroupName))
                         {
-                            <div id="@group.Key" class="tabmenucontent">
+                            <div id="@group.Key" class="tabmenucontent table-responsive">
 
                                 <table class="table">
                                     <thead style="background-color:#ccc;">
                                         <tr>
-                                            <th class="text-center" scope="col" style="display:none">الكود</th>
+                                            <th class="text-center" scope="col">الكود</th>
                                             <th class="text-center" scope="col">الصنف</th>
                                             <th class="text-center" scope="col">الوحدة</th>
                                             <th class="text-center" scope="col">الكمية</th>

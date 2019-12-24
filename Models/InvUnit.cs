@@ -10,6 +10,8 @@ namespace EdgeMobile.Models
     {
         public InvUnit()
         {
+
+            //
            // this.ApPriceOfferDetails = new List<ApPriceOfferDetail>();
          //   this.ArPriceOfferDetails = new List<ArPriceOfferDetail>();
          //   this.ApPurchasingRequestOrderDetails = new List<ApPurchasingRequestOrderDetail>();

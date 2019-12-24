@@ -1,0 +1,270 @@
+﻿@model IEnumerable<EdgeMobile.Models.Customer>
+
+
+
+
+
+
+    <div class="container" style="padding-top:.5rem;">
+        <div class="row invoice-template-pc">
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xss-4">
+                <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xss-4text-center">
+                <h3 class="text-center user-login">
+                    <i class="fas fa-user"></i>
+                </h3>
+                <p class=" text-dark text-center">@Session["UserName"]</p>
+                @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xss-4 text-center">
+                <a class="add-custmoer-link" href="~/Customers/Create"><i class="fas fa-user-plus"></i> </a>
+
+            </div>
+
+        </div>
+        </div>
+
+<div class="container">
+    <div class="row pb-5 shadow-card invoice-template-pc" style="margin-top: 5rem;">
+        <h2 class="customer-heading-first-element" style="">العملاء</h2>
+        <div class="col-md-12" style="padding:0;">
+            <div class="row">
+                <div class="col-md-12 " style="padding:0;">
+                    @foreach (var item in Model)
+                    {
+
+                        <table class="table Customer-datiles-table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row" style=""><i class="fas fa-id-card-alt" aria-hidden="true"></i></th>
+                                    <td>
+                                        كود العميل
+                                    </td>
+                                    <td>
+                                        <div style="display:none">
+                                            @Html.DisplayFor(modelItem => item.ArApCustomerSupplierID)
+                                        </div>
+                                        @Html.DisplayFor(modelItem => item.CustomerSupplierCode)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-user" aria-hidden="true"></i></th>
+                                    <td>اسم العميل</td>
+                                    <td>@Html.DisplayFor(modelItem => item.CustomerSupplierName)</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></th>
+                                    <td>العنوان </td>
+                                    <td>@Html.DisplayFor(modelItem => item.Address)</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-city" aria-hidden="true"></i></th>
+                                    <td>المدينه</td>
+                                    <td>@Html.DisplayFor(modelItem => item.DefLocation.LocationName)</td>
+
+                                </tr>
+                                <tr>
+                                    <th scope="row"><i class="fas fa-phone-volume" aria-hidden="true"></i></th>
+                                    <td>جوال 1</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Telephone1)</td>
+
+                                </tr>
+
+                                <tr>
+                                    <th scope="row"><i class="fas fa-phone-volume" aria-hidden="true"></i></th>
+                                    <td>جوال 2</td>
+                                    <td>@Html.DisplayFor(modelItem => item.Telephone2)</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        @* <ul style="list-style-type: none;
+            font-size: 1.5rem;
+            border-left: 5px solid #ccc;
+            padding-left: 1rem;">
+
+                                    <li>
+                                        <i class="fas fa-id-card-alt"></i> كود العميل : @Html.DisplayFor(modelItem => item.CustomerSupplierCode)
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-user"></i> اسم العميل :  @Html.DisplayFor(modelItem => item.CustomerSupplierName)
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i> العنوان : @Html.DisplayFor(modelItem => item.Address)
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-volume"></i> جوال 1 : @Html.DisplayFor(modelItem => item.Telephone1)
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-phone-volume"></i> جوال 2 : @Html.DisplayFor(modelItem => item.Telephone2)
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-city"></i> المدينه : @Html.DisplayFor(modelItem => item.DefLocation.LocationName)
+                                    </li>
+                                </ul>*@
+                        <div class="main-btn-gradinte">
+                            @Html.ActionLink("بحث", "Search")
+                            @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps", new { id = item.ArApCustomerSupplierID }, null)
+
+                        </div> 
+                    }
+
+                </div>
+                
+                @*<div class="main-btn-gradinte">
+            @Html.ActionLink("بحث", "Search")
+            @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps", new { id=item.ArApCustomerSupplierID })
+        </div>*@
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@*@model IEnumerable<EdgeMobile.Models.Customer>
+
+    <div class="col-md-12 ">
+        <p class=" text-dark">@Session["UserName"]</p>
+        @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+
+    </div>
+    <h2 style="text-align-last :center; padding:42px">العملاء</h2>
+
+
+
+    <div class="container">
+        <div class="row pb-5">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4" style="height: 24rem; position: relative;">
+
+                        <div>
+                            <h1 class="text-center" style="color: white;
+        background: #ccc;
+        padding: 2rem;
+        box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+        font-size: 9rem;">
+                                <i class="fas fa-user"></i>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-md-8 pt-3">
+                        @foreach (var item in Model)
+                        {
+                            <ul style="list-style-type: none;
+        font-size: 1.5rem;
+        border-left: 5px solid #ccc;
+        padding-left: 1rem;">
+
+                                <li>
+                                    <i class="fas fa-id-card-alt"></i> كود العميل : @Html.DisplayFor(modelItem => item.CustomerSupplierCode)
+                                </li>
+                                <li>
+                                    <i class="fas fa-user"></i> اسم العميل :  @Html.DisplayFor(modelItem => item.CustomerSupplierName)
+                                </li>
+                                <li>
+                                    <i class="fas fa-map-marker-alt"></i> العنوان : @Html.DisplayFor(modelItem => item.Address)
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone-volume"></i> جوال 1 : @Html.DisplayFor(modelItem => item.Telephone1)
+                                </li>
+                                <li>
+                                    <i class="fas fa-phone-volume"></i> جوال 2 : @Html.DisplayFor(modelItem => item.Telephone2)
+                                </li>
+                                <li>
+                                    <i class="fas fa-city"></i> المدينه : @Html.DisplayFor(modelItem => item.DefLocation.LocationName)
+                                </li>
+                            </ul>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align-last :center; padding:45px; font-size:25px">
+        @Html.ActionLink("عميل جديد", "Create") |
+        @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps")
+    </div>*@
+@*@model IEnumerable<EdgeMobile.Models.Customer>
+
+    <div class="col-md-12 ">
+        <p class=" text-dark">@Session["UserName"]</p>
+        @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+
+    </div>
+    <h2 style="text-align-last :center; padding:42px; color:cornflowerblue; font-size:22px">العملاء</h2>
+
+    <div class="container">
+        <table class="table table-hover-and-edite" dir="rtl" style="text-align-last:center; font-size:18px">
+            @foreach (var item in Model)
+            {
+                <tr>
+
+                    <td>
+                        <label style="color:blue">المدينة</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DefLocation.LocationName)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label style="color:blue">كود العميل</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustomerSupplierCode)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="color:blue">اسم العميل</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustomerSupplierName)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="color:blue">جوال 1</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telephone1)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="color:blue">جوال 2</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telephone2)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label style="color:blue">عنوان</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+                </tr>
+                <tr style="display:none">
+                    <td>
+                        <label>رقم اخر فاتورة</label>
+                    </td>
+                    <td>
+                        <label>كود العميل</label>
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>*@
+
+

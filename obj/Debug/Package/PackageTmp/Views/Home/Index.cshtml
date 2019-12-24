@@ -1,0 +1,125 @@
+﻿@*@model EdgeMobile.Models.SecUser
+    @{
+        ViewBag.Title = "Home Page";
+    }
+
+    <!DOCTYPE html>
+    <html class="no-js" lang="zxx">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>EDGE</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <link href="~/Content/style.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
+    </head>
+
+    <body>
+        <div id="bg-color">
+            <div id="wrapper " class="p-2">
+                <div id="form-card">
+                    <img class="w-100" src="~/img/logo21102019.png" />
+                    @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.TextBoxFor(a => a.UserName, new
+                     {
+                         @class = "input100",
+                         placeholder = "اسم المستخدم",
+                              @dir = "rtl"
+                     })
+                        @Html.PasswordFor(a => a.Password, new { @class = "input100", placeholder = "الرقم السرى", @dir = "rtl" })
+                        <div class="row">
+                            <div class="col-12">
+                                <button>
+                                    تسجيل الدخول
+                                </button>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <ul id="bg-bubbles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <script src="~/Scripts/site.js"></script>
+        <script src="~/Scripts/kendo/jquery.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+                crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+                crossorigin="anonymous"></script>
+    </body>
+
+    </html>*@
+@model EdgeMobile.Models.SecUser
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<body class="bg-color">
+    <div>
+        <div class="wrapper p-2">
+            <div class="login-card">
+                <img class="image-login" src="~/img/logo21102019.png" />
+                @*<form class="form">*@
+                @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    @*<input type="email" placeholder="Email">*@
+                    @Html.TextBoxFor(a => a.UserName, new
+                 {
+                     @class = "input100",
+                     placeholder = "اسم المستخدم",
+                          @dir = "rtl"
+                 })
+                    @*<input type="password" placeholder="Password">*@
+                    @Html.PasswordFor(a => a.Password, new { @class = "input100", placeholder = "الرقم السرى", @dir = "rtl" })
+                    <div class="row">
+                        <div class="col-md=12">
+                            <button class="btn-login">
+                                تسجيل الدخول
+                                @*@Html.ActionLink("Create New", "Cat")*@
+                            </button>
+                        </div>
+                    </div>
+                }
+                @*</form>*@
+            </div>
+
+            <ul class="bg-bubbles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,105 @@
+﻿@model IEnumerable<EdgeMobile.Models.ViewModels.InvoiceTViewModel>
+
+@{
+    ViewBag.Title = "Details_Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="padding-top:.5rem;">
+    <div class="row" style="justify-content:center;display:flex;width:100%;margin-right:0;">
+
+        <div class="col-md-8 col-sm-8 col-xs-8 col-xxs-8 text-center">
+            <h3 class="text-center user-login">
+                <i class="fas fa-user"></i>
+            </h3>
+            <p class=" text-dark">@Session["UserName"]</p>
+            @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+            @*<p class=" text-dark">User Login</p>*@
+            @Html.TextBox("ArApInvoiceID", @Session["ArApInvoiceID"], new { @style = "display:none" })
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4 col-xxs-4">
+            <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row" style="justify-content:center;display:flex;">
+        <div class="col-md-8 col-sm-12 col-xs-12 col-xxs-12 ">
+            <table class="table dir" @*style="width:50%; margin:auto; "*@>
+
+                @foreach (var item in Model)
+                {
+                    <tr class="table-tr-invoice-edite">
+                        <td align="center" colspan="2">
+                            @Html.DisplayFor(modelItem => item.InvoiceCode)
+
+                            @Html.DisplayNameFor(model => model.InvoiceCode)
+                        </td>
+                    </tr>
+                    <tbody class="table-incovoice-edite-tbody">
+                        <tr>
+                            <td style="direction:rtl; text-align:center">
+                                @Html.DisplayFor(modelItem => item.CustomerSupplierName)
+                            </td>
+                            <td style="direction:rtl; text-align:center">
+                                @Html.DisplayNameFor(model => model.CustomerSupplierName)
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td style="direction:rtl; text-align:center">
+                                @Html.DisplayFor(modelItem => item.InvoiceDate)
+                            </td>
+                            <td style="direction:rtl; text-align:center">
+                                @Html.DisplayNameFor(model => model.InvoiceDate)
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="direction:rtl; text-align:center">
+                                @Html.DisplayFor(modelItem => item.DelegateName)
+                            </td>
+                            <td style="direction:rtl; text-align:center">
+                                @Html.DisplayNameFor(model => model.DelegateName)
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td style="direction:rtl; text-align:center">
+                                @Html.DisplayFor(modelItem => item.BranchName)
+                            </td>
+                            <td style="direction:rtl; text-align:center">
+                                @Html.DisplayNameFor(model => model.BranchName)
+                            </td>
+
+                        </tr>
+                        <tr>
+
+                            <td style="direction:rtl; text-align:center">
+                                @Html.DisplayFor(modelItem => item.Netprice)
+                            </td>
+                            <td style="direction:rtl; text-align:center">
+                                @Html.DisplayNameFor(model => model.Netprice)
+                            </td>
+
+                        </tr>
+                    </tbody>
+                }
+
+            </table>
+        </div>
+    </div>
+
+</div>
+<div id="partial">@{Html.RenderAction("DetailsT", "ArApInvoiceItemTemps", new { ArApInvoiceID = Session["ArApInvoiceID"] });}</div>
+<div class="main-btn-gradinte" style="justify-content:center;display:flex;">
+    @Html.ActionLink("عودة", "Index")
+    @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps")
+</div>
+@*<div style="width:70%; margin:auto;text-align: center; font-size:20px">
+        @Html.ActionLink("عودة", "Index")
+    </div>*@
+@*<div>
+        @Html.ActionLink("الرئيسية", "Cat", "Home")
+    </div>*@
+

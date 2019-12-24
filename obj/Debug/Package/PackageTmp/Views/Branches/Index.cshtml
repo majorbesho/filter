@@ -1,0 +1,75 @@
+﻿@model IEnumerable<EdgeMobile.Models.Branch>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Company.CompanyName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BranchName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Notes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BranchNameEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NotesEN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsMainBranch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GlAccountID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GlAccountIDCompany)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Company.CompanyName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BranchName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BranchNameEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NotesEN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsMainBranch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GlAccountID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GlAccountIDCompany)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DefBranchID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DefBranchID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DefBranchID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,127 @@
+﻿@model IEnumerable<EdgeMobile.Models.ViewModels.InvoiceTViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="container" style="padding-top:1rem;">
+        <div class="row invoice-template-pc" style="justify-content:center;display:flex;width:100%;margin-right:0;">
+
+            <div class="col-md-8 col-sm-8 col-xs-8 col-xxs-8 text-center">
+                <h3 class="text-center user-login">
+                    <i class="fas fa-user"></i>
+                </h3>
+                <p class=" text-dark">@Session["UserName"]</p>
+                @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+                @*<p class=" text-dark">User Login</p>*@
+                @Html.TextBox("ArApInvoiceID", @Session["ArApInvoiceID"], new { @style = "display:none" })
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xxs-4">
+                <a class="add-custmoer-link" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+        <h2 style="text-align-last :center; color:black;">الفواتير</h2>
+
+        <div class="Pb-5 mb-5 table-responsive invoice-template-pc">
+            <table class="table invoice-table">
+                @*<tr class="title-invoice">
+                <td></td>
+                <td class="titleTd" colspan="4"></td>
+                <td class="add">
+                <td></td>
+
+                </tr>*@
+                <tr class="table-tbody-invoice">
+                    <td>@Html.DisplayNameFor(model => model.InvoiceCode)</td>
+                    <td>@Html.DisplayNameFor(model => model.InvoiceDate)</td>
+                    <td> @Html.DisplayNameFor(model => model.DelegateName) </td>
+                    <td>@Html.DisplayNameFor(model => model.CustomerSupplierName) </td>
+                    <td> @Html.DisplayNameFor(model => model.BranchName)</td>
+                    <td>@Html.DisplayNameFor(model => model.Netprice)</td>
+                    <td></td>
+                </tr>
+                @*<tr>
+
+                    <th style="text-align-last:center">
+                        @Html.DisplayNameFor(model => model.InvoiceCode)
+                    </th>
+                    <th style="text-align-last:center">
+                        @Html.DisplayNameFor(model => model.InvoiceDate)
+                    </th>
+                    <th style="text-align-last:center">
+                        @Html.DisplayNameFor(model => model.DelegateName)
+                    </th>
+                    <th style="text-align-last:center">
+                        @Html.DisplayNameFor(model => model.CustomerSupplierName)
+                    </th>
+                    <th style="text-align-last:center">
+                        @Html.DisplayNameFor(model => model.BranchName)
+                    </th>
+                    <th style="text-align-last:center">
+                        @Html.DisplayNameFor(model => model.Netprice)
+                    </th>
+                    <th style="text-align-last:center">
+
+                    </th>
+                </tr>*@
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvoiceCode)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.InvoiceDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DelegateName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CustomerSupplierName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BranchName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Netprice)
+                        </td>
+                        <td class="table-Settings-invoice only-edite-icone">
+
+                            @Html.ActionLink("تفاصيل", "Details_Edit", new { @class = "fas fa-edit", id = item.ArApInvoiceID })
+                            <i class="fas fa-edit"></i>
+
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+
+
+
+        <div class="row main-btn-media-query" style="    margin-right: 0!important;
+    margin-left: 0!important;">
+            <div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12">
+                <div class="row" style="justify-content:center;display:flex;">
+                    <div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12 main-btn-gradinte" style="justify-content:center;display:flex;">
+                        @Html.ActionLink("عميل جديد", "Create", "Customers")
+                    </div>
+                </div>
+            </div>
+            @*
+            <div class="col-md-6 col-sm-6 col-xs-6 col-xxs-6">
+                <div class="row" style="justify-content:center;display:flex;">
+                    <div class="col-md-12 col-sm-12 col-xs-12 col-xxs-12 main-btn-gradinte" style="justify-content:center;display:flex;">
+                        @Html.ActionLink("الفواتير", "Index")
+                    </div>
+                </div>
+            </div>
+                *@
+        </div>

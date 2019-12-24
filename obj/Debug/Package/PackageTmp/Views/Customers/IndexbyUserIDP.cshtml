@@ -1,0 +1,168 @@
+﻿@*@model IEnumerable<EdgeMobile.Models.ViewModels.CustomerViewModel>*@
+@model PagedList.IPagedList<EdgeMobile.Models.ViewModels.CustomerViewModel>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "IndexbyUserIDP";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div class="container" style="padding-top:.5rem;">
+        
+        <div class="row invoice-template-pc" style="justify-content:center;display:flex;">
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xss-4">
+                <a class="add-custmoer-link text-center" href="~/Customers/Create"><i class="fas fa-user-plus"></i> </a>
+            </div>
+            <div class="col-md-12 text-center">
+                <h3 class="text-center user-login">
+                    <i class="fas fa-user"></i>
+                </h3>
+                <p class=" text-dark">@Session["UserName"]</p>
+                @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+                @*<p class=" text-dark">User Login</p>*@
+                @Html.TextBox("ArApInvoiceID", @Session["ArApInvoiceID"], new { @style = "display:none" })
+
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4 col-xss-4">
+                <a class="add-custmoer-link text-center" style="float:left;" href="~/Home/Cat"><i class="fas fa-home"></i></a>
+            </div>
+        </div>
+
+
+
+    </div>
+
+<h2  style="text-align-last:center;">العملاء</h2>
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+
+<div class="table-responsive invoice-template-pc" style="width:100%;overflow:scroll;height:30rem;">
+    <table class="table dir" @*style="width:50%; margin:auto; "*@>
+
+
+        <tr class="table-tr-invoice-edite">
+            <th>
+                @*@Html.LabelFor(model => model.ArApInvoiceID, htmlAttributes: new { @class = "control-label col-md-2" })*@
+
+                <label>العميل </label>
+            
+                @*@Html.DisplayNameFor(model => model.CustomerSupplierName)*@
+                @*<label>اسم العميل</label>*@
+            </th>
+            @*<th>
+              
+                <label>العنوان</label>
+            </th>*@
+            <th>
+                @*@Html.DisplayNameFor(model => model.Telephone1)*@
+                <label>الجوال </label>
+           
+                @*@Html.DisplayNameFor(model => model.Telephone2)*@
+                @*<label>الجوال 2</label>*@
+            </th>
+            <th></th>
+        </tr>
+        <tbody class="table-incovoice-edite-tbody">
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CustomerSupplierCode)
+                  -
+                        @Html.DisplayFor(modelItem => item.CustomerSupplierName)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telephone1)
+                  -
+                        @Html.DisplayFor(modelItem => item.Telephone2)
+                    </td>
+                    <td>
+                        @*@Html.ActionLink("Edit", "Edit", new { id = item.ArApCustomerSupplierID }) |*@
+                        @Html.ActionLink("تفاصيل", "Details2", new { id = item.ArApCustomerSupplierID })
+                        @*@Html.ActionLink("Delete", "Delete", new { id = item.ArApCustomerSupplierID })*@
+                    </td>
+
+                </tr>
+
+            }
+        </tbody>
+
+    </table>
+
+</div>
+
+
+@*
+    <table class="table dir" style="text-align-last:center">
+        <tr>
+            <th>
+                @Html.LabelFor(model => model.ArApInvoiceID, htmlAttributes: new { @class = "control-label col-md-2" })
+
+<label>كود العميل</label>
+        </th>
+<th>
+    @Html.DisplayNameFor(model => model.CustomerSupplierName)
+    <label>اسم العميل</label>
+</th>
+<th>
+    @Html.DisplayNameFor(model => model.Address)
+    <label>العنوان</label>
+</th>
+<th>
+    @Html.DisplayNameFor(model => model.Telephone1)
+    <label>الجوال 1</label>
+</th>
+<th>
+    @Html.DisplayNameFor(model => model.Telephone2)
+    <label>الجوال 2</label>
+</th>
+<th></th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerSupplierCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerSupplierName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telephone1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telephone2)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ArApCustomerSupplierID }) |
+            @Html.ActionLink("Details", "Details2", new { id = item.ArApCustomerSupplierID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ArApCustomerSupplierID })
+        </td>
+    </tr>
+}
+
+</table>
+    *@
+<div style="text-align-last:center">
+    Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+    @Html.PagedListPager(Model, page => Url.Action("IndexbyUserIDP",
+        new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+
+</div>
+<div class="container">
+    <div class="row" style="display:flex;justify-content:center;">
+        <div class="col-md-1 main-btn-gradinte">
+            @Html.ActionLink("اصدار فاتورة", "Create", "ArApInvoiceTemps")
+        </div>
+    </div>
+
+</div>
+

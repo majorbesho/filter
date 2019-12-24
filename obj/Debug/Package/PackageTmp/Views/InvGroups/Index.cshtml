@@ -1,0 +1,45 @@
+﻿@model IEnumerable<EdgeMobile.Models.InvGroup>
+@using Kendo.Mvc.UI
+@using GridMvc.Html
+
+
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h2>Index</h2>
+
+
+@using (Html.BeginForm("LoadItems", "InvGroups", FormMethod.Post))
+{
+
+    foreach (var item in Model)
+    {
+
+
+        <div>
+            @Html.ActionLink(item.GroupName, "LoadItems_pp", new { id = item.InvGroupID }, null)
+        </div>
+
+        @*<div id="partial">@{Html.RenderAction("LoadItems_pp", "InvGroups", new { id = item.InvGroupID });}</div>*@
+      
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Save" class="btn btn-default" />
+            @*@Html.ActionLink("LoadItems", "LoadItems")*@
+
+        </div>
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+

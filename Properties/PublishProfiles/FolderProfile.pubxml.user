@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>D:\Rasha\Publish</_PublishTargetUrl>
+    <_PublishTargetUrl>C:\Users\dev3\source\public</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -85,10 +85,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2019 10:56:12</publishTime>
     </File>
     <File Include="bin/EdgeMobile.dll">
-      <publishTime>12/18/2019 14:32:16</publishTime>
+      <publishTime>12/25/2019 20:23:09</publishTime>
     </File>
     <File Include="bin/EdgeMobile.pdb">
-      <publishTime>12/18/2019 14:32:16</publishTime>
+      <publishTime>12/25/2019 20:23:09</publishTime>
     </File>
     <File Include="bin/el-GR/Kendo.Mvc.resources.dll">
       <publishTime>06/19/2019 02:50:26</publishTime>
@@ -330,6 +330,27 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="bin/pt-PT/Kendo.Mvc.resources.dll">
       <publishTime>06/19/2019 02:50:26</publishTime>
     </File>
+    <File Include="bin/Reports/ArReportInvoice.frx">
+      <publishTime>12/10/2019 10:56:09</publishTime>
+    </File>
+    <File Include="bin/Reports/CashVoucher.cs">
+      <publishTime>12/10/2019 10:56:09</publishTime>
+    </File>
+    <File Include="bin/Reports/CashVoucher.rpt">
+      <publishTime>12/10/2019 10:56:09</publishTime>
+    </File>
+    <File Include="bin/Reports/CashVouserR.cs">
+      <publishTime>12/10/2019 10:56:09</publishTime>
+    </File>
+    <File Include="bin/Reports/CashVouserR.rpt">
+      <publishTime>12/10/2019 10:56:09</publishTime>
+    </File>
+    <File Include="bin/Reports/InvoiceR.cs">
+      <publishTime>12/10/2019 10:56:09</publishTime>
+    </File>
+    <File Include="bin/Reports/InvoiceR.rpt">
+      <publishTime>12/10/2019 10:56:09</publishTime>
+    </File>
     <File Include="bin/ro-RO/Kendo.Mvc.resources.dll">
       <publishTime>06/19/2019 02:50:26</publishTime>
     </File>
@@ -478,7 +499,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/19/2019 02:50:26</publishTime>
     </File>
     <File Include="bin/stdole.dll">
-      <publishTime>10/16/2019 15:39:39</publishTime>
+      <publishTime>10/09/2019 13:57:43</publishTime>
     </File>
     <File Include="bin/sv-SE/Kendo.Mvc.resources.dll">
       <publishTime>06/19/2019 02:50:26</publishTime>
@@ -1822,7 +1843,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Content/style.css">
-      <publishTime>12/15/2019 08:42:24</publishTime>
+      <publishTime>12/24/2019 10:51:40</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>12/10/2019 10:56:10</publishTime>
@@ -6811,6 +6832,15 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2019 10:56:10</publishTime>
     </File>
     <File Include="Reports/ArReportInvoice.frx">
+      <publishTime>12/10/2019 10:56:09</publishTime>
+    </File>
+    <File Include="Reports/CashVoucher.rpt">
+      <publishTime>12/10/2019 10:56:09</publishTime>
+    </File>
+    <File Include="Reports/CashVouserR.rpt">
+      <publishTime>12/10/2019 10:56:09</publishTime>
+    </File>
+    <File Include="Reports/InvoiceR.rpt">
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Scripts/all.min.js">
@@ -13114,10 +13144,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Views/ArApInvoiceTemps/DetailsInv.cshtml">
-      <publishTime>12/15/2019 08:42:24</publishTime>
+      <publishTime>12/24/2019 03:14:28</publishTime>
     </File>
     <File Include="Views/ArApInvoiceTemps/Details_Edit.cshtml">
-      <publishTime>12/15/2019 08:42:24</publishTime>
+      <publishTime>12/19/2019 02:39:12</publishTime>
     </File>
     <File Include="Views/ArApInvoiceTemps/Edit.cshtml">
       <publishTime>12/10/2019 10:56:09</publishTime>
@@ -13192,10 +13222,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Views/Home/Cat.cshtml">
-      <publishTime>12/15/2019 08:42:24</publishTime>
+      <publishTime>12/24/2019 02:40:46</publishTime>
     </File>
     <File Include="Views/Home/Cat2.cshtml">
-      <publishTime>12/15/2019 08:42:24</publishTime>
+      <publishTime>12/24/2019 02:40:45</publishTime>
     </File>
     <File Include="Views/Home/Contact.cshtml">
       <publishTime>12/10/2019 10:56:09</publishTime>
@@ -13222,7 +13252,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/17/2019 11:10:06</publishTime>
     </File>
     <File Include="Views/InvGroups/LoadItems_Edit.cshtml">
-      <publishTime>12/11/2019 18:01:05</publishTime>
+      <publishTime>12/24/2019 20:36:46</publishTime>
     </File>
     <File Include="Views/InvGroups/LoadItems_pp.cshtml">
       <publishTime>12/10/2019 10:56:09</publishTime>
@@ -13261,7 +13291,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/10/2019 10:56:09</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/11/2019 13:43:32</publishTime>
+      <publishTime>12/24/2019 23:23:41</publishTime>
     </File>
   </ItemGroup>
 </Project>

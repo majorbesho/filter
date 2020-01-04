@@ -14,7 +14,9 @@ namespace EdgeMobile.Models
         public Nullable<int> ArApCustomerSupplierID { get; set; }
         public int ArApDelegateID { get; set; }
         public short CashVouchertype { get; set; }
+        
         [DisplayFormat(DataFormatString = "{0:0.###}")]
+        [Required(ErrorMessage = ".برجاء ادخال قيمة السند")]
         public decimal CashVoucherValue { get; set; }
         public string CashVoucherNote { get; set; }
         public Nullable<long> RecordOwnerID { get; set; }

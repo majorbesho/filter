@@ -30,7 +30,12 @@
 
 @using (Html.BeginForm("LoadItems_Edit", "InvGroups", FormMethod.Post))
 {
-
+<div>
+    @*<p class="user-login-creat-invoice-p-h1 text-center">@Session["UserName"]</p>*@
+    @Html.TextBox("UserName", @Session["UserName"], new { @style = "display:none" })
+    @*<p class=" text-dark">User Login</p>*@
+    @Html.TextBox("ArApInvoiceID", @Session["ArApInvoiceID"], new { @style = "display:none" })
+</div>
 
     <div class="container">
         <div class="row">
@@ -61,7 +66,7 @@
                                 <table class="table">
                                     <thead style="background-color:#ccc;">
                                         <tr>
-                                            <th class="text-center" scope="col" style="display:none">الكود</th>
+                                            <th class="text-center" scope="col">الكود</th>
                                             <th class="text-center" scope="col">الصنف</th>
                                             <th class="text-center" scope="col">الوحدة</th>
                                             <th class="text-center" scope="col">الكمية</th>

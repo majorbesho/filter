@@ -12,7 +12,7 @@ namespace EdgeMobile.Models
         {
             this.Branches = new List<Branch>();
         }
-
+        //8
         public int DefCompanyID { get; set; }
         public string CompanyName { get; set; }
         public string Address { get; set; }

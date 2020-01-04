@@ -83,6 +83,31 @@ namespace EdgeMobile.Controllers
             //if (ModelState.IsValid)
             glCashVoucherCash.CashVoucherDate = DateTime.Now.Date;
             glCashVoucherCash.CashVouchertype = 0;
+            if(glCashVoucherCash.CashVoucherValue<=0)
+            {
+                try
+                {
+                    var CashVoucherID = db.GlCashVoucherCashes/*.Where(r => r.ArApDelegateIDMarketing == SecUserID)*/
+                               .Max(r => r.GlCashVoucherCID).ToString();
+
+                    var CashVoucherS = db.GlCashVoucherCashes.Find(int.Parse(CashVoucherID.ToString()));
+                    ViewBag.CashVoucherSerial = (int.Parse(CashVoucherS.CashVoucherSerial) + 1).ToString();
+                }
+                catch
+                {
+                    ViewBag.CashVoucherSerial = "1";
+
+                }
+                ModelState.AddModelError("CashVoucherValue", ".برجاء ادخال قيمة السند");
+                ViewBag.ArApCustomerSupplierID = new SelectList(db.Customer, "ArApCustomerSupplierID", "CustomerSupplierName", glCashVoucherCash.ArApCustomerSupplierID);
+                ViewBag.ArApDelegateID = new SelectList(db.Delegates, "ArApDelegateID", "DelegateName", glCashVoucherCash.ArApDelegateID);
+
+                return View(glCashVoucherCash);
+            }
+           else
+            {
+                ModelState.AddModelError("CashVoucherValue","");
+            }
             try
             {
                 var CashVoucherID = db.GlCashVoucherCashes/*.Where(r => r.ArApDelegateIDMarketing == SecUserID)*/
@@ -102,6 +127,10 @@ namespace EdgeMobile.Controllers
                 if (cashVoucherCashes.Count >0)
                 {
                     ModelState.AddModelError("CashVoucherSerial", "برجاء ادخال سيريال غير مستخدم");
+                    ViewBag.ArApCustomerSupplierID = new SelectList(db.Customer, "ArApCustomerSupplierID", "CustomerSupplierCode", glCashVoucherCash.ArApCustomerSupplierID);
+                    ViewBag.ArApDelegateID = new SelectList(db.Delegates, "ArApDelegateID", "DelegateCode", glCashVoucherCash.ArApDelegateID);
+
+                    return View(glCashVoucherCash);
                 }
                 else
                 {

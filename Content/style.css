@@ -112,10 +112,12 @@ button#login-button {
     border: 1px solid #ccc;
     cursor: pointer;
 }
-
-    .table-hover-and-edite tbody {
-        border: 1px solid transparent;
-    }
+table tbody tr th, table tbody tr td, table thead tr th, table thead tr td {
+    text-align:center!important;
+}
+.table-hover-and-edite tbody {
+    border: 1px solid transparent;
+}
 
         .table-hover-and-edite tbody tr {
             border-top: 1px solid transparent !important;
@@ -591,7 +593,12 @@ a:hover {
         border-color: #17a2b8;
         text-decoration: none;
     }
-
+    .category-card-link:visited {
+        color: #fff;
+        background-color: #17a2b8;
+        border-color: #17a2b8;
+        text-decoration: none;
+    }
     .category-card-link:active {
         color: #fff;
         background-color: #17a2b8;
@@ -1235,10 +1242,10 @@ table.dir {
 /* End edite-heading-table-index*/
 /* End Main Button*/
 footer {
-    position: relative;
+    position: absolute;
     width: 100%;
-    overflow:hidden;
- 
+    overflow: hidden;
+    margin-top: 1rem;
 }
 
     footer p {
@@ -1307,7 +1314,7 @@ footer {
     display: block;
 }
 .category-card-link{
-    left:45%;
+    display:flex;
 }
 .loaditems-grid {
     height: 21rem;
@@ -1368,10 +1375,14 @@ footer {
         top:22%;
     }
     .category-card-link {
-        left: 40%;
+        display:flex;
     }
-    .invoice-template-pc{
-        margin-top:5rem;
+    .invoice-template-pc {
+        margin-top: 5rem;
+        
+    }
+    .invoice-template-pc-height {
+        height: 40rem;
     }
     .loaditems-grid {
         height: 72rem;

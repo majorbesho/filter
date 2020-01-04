@@ -1,0 +1,817 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<inherited BaseReport="..\..\EdgeInvoice\EdgeInvoice\EdgeERP.GUI\Arabic\Shared\Reports\TemplateReport\NewTempelate\ReportSettingTemplate.frx" ScriptLanguage="CSharp" ReferencedAssemblies="System.dll&#13;&#10;System.Drawing.dll&#13;&#10;System.Windows.Forms.dll&#13;&#10;System.Data.dll&#13;&#10;System.Xml.dll&#13;&#10;tafqet.dll" ReportInfo.Created="04/24/2016 14:51:45" ReportInfo.Modified="11/23/2019 23:02:42" ReportInfo.CreatorVersion="2019.4.14.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+using EdgeERP.GUI.Arabic.TfiqitNumbersToLetters;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+    private void ReportSummary1_AfterData(object sender, EventArgs e)
+    {
+      //EdgeERP.GUI.Arabic.TfiqitNumbersToLetters.CurrencyInfo cur = new CurrencyInfo(CurrencyInfo.Currencies.Qatar);
+      //decimal invoiceNet = Convert.ToDecimal( txtNetInvoice.Text); //  3325.66m;     
+      //EdgeERP.GUI.Arabic.TfiqitNumbersToLetters.ToWord toWordObj = new ToWord(invoiceNet, cur);
+      // var xx = aa;  
+      //txtTafiqet.Text = toWordObj.ConvertToEnglish();
+      
+      
+      
+      
+    }
+  }
+}
+</ScriptText>
+  <Styles>
+    <Style Name="Title" Border.Lines="Bottom" Font="Arial, 16pt, style=Bold"/>
+    <Style Name="Header" Border.Lines="Top, Bottom" Fill.Color="LightGray" Font="Arial, 9.75pt, style=Bold"/>
+    <Style Name="Group" Font="Arial, 14.25pt, style=Bold"/>
+    <Style Name="Subgroup" Font="Microsoft Sans Serif, 11.25pt, style=Bold"/>
+    <Style Name="Data" Font="Arial, 10pt"/>
+    <Style Name="EvenRows" Fill.Color="Gainsboro" Font="Arial, 10pt" ApplyBorder="false" ApplyTextFill="false" ApplyFont="false"/>
+    <Style Name="Totals" Font="Arial, 9.75pt, style=Bold"/>
+    <Style Name="Number" Font="Arial, 10pt"/>
+    <Style Name="Text" Font="Arial, 10pt"/>
+    <Style Name="Footer" Font="Arial, 9.75pt, style=Bold" ApplyFill="false"/>
+    <Style Name="Date" Font="Arial, 10pt" ApplyBorder="false" ApplyFill="false" ApplyTextFill="false" ApplyFont="false"/>
+  </Styles>
+  <Dictionary>
+    <BusinessObjectDataSource Name="Table" ReferenceName="Table" DataType="null" Enabled="true"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="System.String"/>
+    <Parameter Name="SubTitleName2EN" DataType="System.String"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="null"/>
+    <Parameter Name="SubTitleName2EN" DataType="null"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="System.String"/>
+    <Parameter Name="Address1EN" DataType="System.String"/>
+    <Parameter Name="UserName" DataType="System.String"/>
+    <Parameter Name="UserName" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="System.String"/>
+    <Parameter Name="TitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName" DataType="System.String"/>
+    <Parameter Name="SubTitleNameEN" DataType="System.String"/>
+    <Parameter Name="SubTitleName1" DataType="System.String"/>
+    <Parameter Name="SubTitleName1EN" DataType="System.String"/>
+    <Parameter Name="SubTitleName2" DataType="null"/>
+    <Parameter Name="SubTitleName2EN" DataType="null"/>
+    <Parameter Name="Address" DataType="System.String"/>
+    <Parameter Name="AddressEN" DataType="System.String"/>
+    <Parameter Name="Address1" DataType="null"/>
+    <Parameter Name="Address1EN" DataType="null"/>
+    <Parameter Name="UserName" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="null"/>
+    <Parameter Name="TitleNameEN" DataType="null"/>
+    <Parameter Name="SubTitleName" DataType="null"/>
+    <Parameter Name="SubTitleNameEN" DataType="null"/>
+    <Parameter Name="SubTitleName1" DataType="null"/>
+    <Parameter Name="SubTitleName1EN" DataType="null"/>
+    <Parameter Name="SubTitleName2" DataType="null"/>
+    <Parameter Name="SubTitleName2EN" DataType="null"/>
+    <Parameter Name="Address" DataType="null"/>
+    <Parameter Name="AddressEN" DataType="null"/>
+    <Parameter Name="Address1" DataType="null"/>
+    <Parameter Name="Address1EN" DataType="null"/>
+    <Parameter Name="UserName" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="null"/>
+    <Parameter Name="TitleNameEN" DataType="null"/>
+    <Parameter Name="SubTitleName" DataType="null"/>
+    <Parameter Name="SubTitleNameEN" DataType="null"/>
+    <Parameter Name="SubTitleName1" DataType="null"/>
+    <Parameter Name="SubTitleName1EN" DataType="null"/>
+    <Parameter Name="SubTitleName2" DataType="null"/>
+    <Parameter Name="SubTitleName2EN" DataType="null"/>
+    <Parameter Name="Address" DataType="null"/>
+    <Parameter Name="AddressEN" DataType="null"/>
+    <Parameter Name="Address1" DataType="null"/>
+    <Parameter Name="Address1EN" DataType="null"/>
+    <Parameter Name="UserName" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="null"/>
+    <Parameter Name="TitleNameEN" DataType="null"/>
+    <Parameter Name="SubTitleName" DataType="null"/>
+    <Parameter Name="SubTitleNameEN" DataType="null"/>
+    <Parameter Name="SubTitleName1" DataType="null"/>
+    <Parameter Name="SubTitleName1EN" DataType="null"/>
+    <Parameter Name="SubTitleName2" DataType="null"/>
+    <Parameter Name="SubTitleName2EN" DataType="null"/>
+    <Parameter Name="Address" DataType="null"/>
+    <Parameter Name="AddressEN" DataType="null"/>
+    <Parameter Name="Address1" DataType="null"/>
+    <Parameter Name="Address1EN" DataType="null"/>
+    <Parameter Name="UserName" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="null"/>
+    <Parameter Name="TitleNameEN" DataType="null"/>
+    <Parameter Name="SubTitleName" DataType="null"/>
+    <Parameter Name="SubTitleNameEN" DataType="null"/>
+    <Parameter Name="SubTitleName1" DataType="null"/>
+    <Parameter Name="SubTitleName1EN" DataType="null"/>
+    <Parameter Name="SubTitleName2" DataType="null"/>
+    <Parameter Name="SubTitleName2EN" DataType="null"/>
+    <Parameter Name="Address" DataType="null"/>
+    <Parameter Name="AddressEN" DataType="null"/>
+    <Parameter Name="Address1" DataType="null"/>
+    <Parameter Name="Address1EN" DataType="null"/>
+    <Parameter Name="UserName" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="null"/>
+    <Parameter Name="TitleNameEN" DataType="null"/>
+    <Parameter Name="SubTitleName" DataType="null"/>
+    <Parameter Name="SubTitleNameEN" DataType="null"/>
+    <Parameter Name="SubTitleName1" DataType="null"/>
+    <Parameter Name="SubTitleName1EN" DataType="null"/>
+    <Parameter Name="SubTitleName2" DataType="null"/>
+    <Parameter Name="SubTitleName2EN" DataType="null"/>
+    <Parameter Name="Address" DataType="null"/>
+    <Parameter Name="AddressEN" DataType="null"/>
+    <Parameter Name="Address1" DataType="null"/>
+    <Parameter Name="Address1EN" DataType="null"/>
+    <Parameter Name="UserName" DataType="System.String"/>
+    <Parameter Name="TitleName" DataType="null"/>
+    <Parameter Name="TitleNameEN" DataType="null"/>
+    <Parameter Name="SubTitleName" DataType="null"/>
+    <Parameter Name="SubTitleNameEN" DataType="null"/>
+    <Parameter Name="SubTitleName1" DataType="null"/>
+    <Parameter Name="SubTitleName1EN" DataType="null"/>
+    <Parameter Name="SubTitleName2" DataType="null"/>
+    <Parameter Name="SubTitleName2EN" DataType="null"/>
+    <Parameter Name="Address" DataType="null"/>
+    <Parameter Name="AddressEN" DataType="null"/>
+    <Parameter Name="Address1" DataType="null"/>
+    <Parameter Name="Address1EN" DataType="null"/>
+  </Dictionary>
+  <inherited Name="Page1" PaperHeight="277" RawPaperSize="10" TopMargin="9">
+    <inherited Name="ReportTitle1" Height="255.15">
+      <inherited Name="txtTitleName"/>
+      <inherited Name="txtTitleNameEN"/>
+      <inherited Name="txtSubTitleName"/>
+      <inherited Name="txtSubTitleName1"/>
+      <inherited Name="txtSubTitleNameEN"/>
+      <inherited Name="txtSubTitleName1EN"/>
+      <inherited Name="txtSubTitleName2EN"/>
+      <inherited Name="txtSubTitleName2"/>
+      <PictureObject Name="Picture1" ZOrder="8" Left="292.95" Top="9.45" Width="103.95" Height="94.5" DataColumn="Table.CompanyLogo" SizeMode="StretchImage"/>
+      <TextObject Name="Text10" ZOrder="9" Left="151.2" Top="113.4" Width="198.45" Height="18.9" Text="[Table.ArWindowShowTypeName]" HorzAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <LineObject Name="Line3" ZOrder="10" Top="132.3" Width="708.75"/>
+      <TextObject Name="Text24" ZOrder="11" Left="349.65" Top="103.95" Width="198.45" Height="28.35" Text="Sales Invoice" HorzAlign="Center" Font="Arial, 16pt, style=Bold"/>
+      <TextObject Name="Text27" ZOrder="12" Left="508.41" Top="151.2" Width="62.37" Height="18.9" Text=": اســــم العميل  " Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="txtCustomerSupplierCode" ZOrder="13" Left="508.41" Top="170.1" Width="62.37" Height="18.9" Text=": كـــود العميل " Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="txtCustomerSupplierAddress" ZOrder="14" Left="508.41" Top="189" Width="62.37" Height="18.9" Text=": عنوان العميل " Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text28" ZOrder="15" Left="372.33" Top="189" Width="136.08" Height="18.9" Text="[Table.Address]" AutoShrink="FontWidth" HorzAlign="Right" Font="Arial, 8pt"/>
+      <TextObject Name="txtDelegateMarketing" ZOrder="16" Left="306.18" Top="151.2" Width="66.15" Height="18.9" Text=": المــــــــــــوزع " Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="txtDelegateSales" ZOrder="17" Left="306.18" Top="170.1" Width="66.15" Height="18.9" Text=": المنــــــــــدوب " Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="txtPagesCount" ZOrder="18" Left="306.18" Top="189" Width="66.15" Height="18.9" Text=": عدد الصفحات" Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text29" ZOrder="19" Left="287.28" Top="170.1" Width="18.9" Height="18.9" Text="[Table.DelegateSalesCode]" HorzAlign="Right" Font="Arial, 8pt"/>
+      <TextObject Name="Text30" ZOrder="20" Left="287.28" Top="189" Width="18.9" Height="18.9" Text="[Page]" HorzAlign="Right" Font="Arial, 8pt"/>
+      <TextObject Name="Text31" ZOrder="21" Left="287.28" Top="151.2" Width="18.9" Height="18.9" Text="[Table.MarketingDelegateCode]" HorzAlign="Right" Font="Arial, 8pt"/>
+      <TextObject Name="Text32" ZOrder="22" Left="211.68" Top="151.2" Width="75.6" Height="18.9" Text=": رقـــــم الفاتورة " Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="txtInvoiceDate" ZOrder="23" Left="211.68" Top="170.1" Width="75.6" Height="18.9" Text=": تاريخ الفاتورة " Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="txtPrintTime" ZOrder="24" Left="211.68" Top="189" Width="75.6" Height="18.9" Text=": توقيت الطباعة " Font="Arial, 8pt, style=Bold"/>
+      <TextObject Name="Text33" ZOrder="25" Left="141.75" Top="151.2" Width="69.93" Height="18.9" Text="[Table.InvoiceCode]" HorzAlign="Right" Font="Arial, 8pt"/>
+      <TextObject Name="Text34" ZOrder="26" Left="141.75" Top="170.1" Width="69.93" Height="18.9" Text="[Date]" Format="Date" Format.Format="yyyy/MM/dd" HorzAlign="Right" Font="Arial, 8pt"/>
+      <TextObject Name="Text35" ZOrder="27" Left="141.75" Top="189" Width="69.93" Height="18.9" Text="[Date]" Format="Date" Format.Format="hh:mm tt" HorzAlign="Right" Font="Arial, 8pt"/>
+      <TextObject Name="txtCustomerSupplierNameValue" ZOrder="28" Left="372.33" Top="151.2" Width="136.08" Height="18.9" Text="[Table.CustomerSupplierName]" HorzAlign="Right" Font="Arial, 8pt"/>
+      <TextObject Name="Text36" ZOrder="29" Left="372.33" Top="170.1" Width="136.08" Height="18.9" Text="[Table.CustomerSupplierCode]" HorzAlign="Right" Font="Arial, 8pt"/>
+    </inherited>
+    <inherited Name="PageHeader1" Top="259.15" Height="160.65">
+      <TextObject Name="lblQuantity" ZOrder="0" Left="378" Top="132.3" Width="189" Height="28.35" Border.ShadowColor="DimGray" Border.Lines="Top, Bottom" Border.Color="DimGray" Fill.Color="LightGray" Text="Name" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="lblPrice" ZOrder="1" Left="189" Top="132.3" Width="94.5" Height="28.35" Border.ShadowColor="DimGray" Border.Lines="Top, Bottom" Border.Color="DimGray" Fill.Color="LightGray" Text="Quantity" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="lblCustomerSupplierName" ZOrder="2" Left="604.8" Top="37.8" Width="94.5" Height="18.9" Text=": اســــم العميل  " HorzAlign="Right" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="lblItemTotalPrice" ZOrder="3" Left="75.6" Top="132.3" Width="113.4" Height="28.35" Border.ShadowColor="DimGray" Border.Lines="Top, Bottom" Border.Color="DimGray" Fill.Color="LightGray" Text="U.price" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="lblItemName" ZOrder="4" Left="567" Top="132.3" Width="132.3" Height="28.35" Border.ShadowColor="DimGray" Border.Lines="Top, Bottom" Border.Color="DimGray" Fill.Color="LightGray" Text="Code" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="Text14" ZOrder="5" Left="604.8" Top="9.45" Width="94.5" Height="18.9" Text=": كـــود العميل " HorzAlign="Right" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="Text15" ZOrder="6" Left="604.8" Top="94.5" Width="94.5" Height="18.9" Text=":Notes" HorzAlign="Right" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="Text17" ZOrder="7" Left="189" Top="37.8" Width="94.5" Height="18.9" Text=":.Inv.No" HorzAlign="Right" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="Text18" ZOrder="8" Left="189" Top="94.5" Width="94.5" Height="18.9" Text=":Pay.Type" HorzAlign="Right" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="Text3" ZOrder="9" Left="292.95" Top="9.45" Width="302.4" Height="18.9" Text="[Table.CustomerSupplierCode]" HorzAlign="Right" Font="Arial, 10pt"/>
+      <TextObject Name="txtCustomerSupplierName" ZOrder="10" Left="292.95" Top="37.8" Width="302.4" Height="18.9" Text="[Table.CustomerSupplierName]" HorzAlign="Right" WordWrap="false" Font="Arial, 12pt"/>
+      <TextObject Name="Text12" ZOrder="11" Left="292.95" Top="94.5" Width="302.4" Height="18.9" Text="[Table.Note]" HorzAlign="Right" Font="Arial, 10pt"/>
+      <TextObject Name="Text11" ZOrder="12" Left="28.35" Top="9.45" Width="141.75" Height="18.9" Text="[Table.InvoiceDate]" Format="Date" Format.Format="d" HorzAlign="Right" Font="Arial, 10pt"/>
+      <TextObject Name="txtInvoiceCode" ZOrder="13" Left="28.35" Top="37.8" Width="141.75" Height="18.9" Text="[Table.InvoiceCode]" HorzAlign="Right" Font="Arial, 12pt"/>
+      <TextObject Name="Text19" ZOrder="14" Left="-18.9" Top="132.3" Width="94.5" Height="28.35" Border.ShadowColor="DimGray" Border.Lines="Top, Bottom" Border.Color="DimGray" Fill.Color="LightGray" Text="Amount" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="Text16" ZOrder="15" Left="189" Top="9.45" Width="94.5" Height="18.9" Text=":Inv.Date" HorzAlign="Right" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="Text13" ZOrder="16" Left="680.4" Top="132.3" Width="47.25" Height="28.35" Border.ShadowColor="DimGray" Border.Lines="Top, Bottom" Border.Color="DimGray" Fill.Color="LightGray" Text="No" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="Text21" ZOrder="17" Left="283.5" Top="132.3" Width="94.5" Height="28.35" Border.ShadowColor="DimGray" Border.Lines="Top, Bottom" Border.Color="DimGray" Fill.Color="LightGray" Text="Unit" HorzAlign="Center" VertAlign="Center" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="Text26" ZOrder="18" Left="189" Top="66.15" Width="94.5" Height="18.9" Text=".Lpo.No" HorzAlign="Right" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="Text4" ZOrder="19" Left="292.95" Top="66.15" Width="302.4" Height="18.9" Text="[Table.DelegateSalesName]" HorzAlign="Right" Font="Arial, 12pt"/>
+      <TextObject Name="Text37" ZOrder="20" Left="604.8" Top="66.15" Width="94.5" Height="18.9" Text=": الفنــــــــــي" Font="Arial, 8pt, style=Bold"/>
+    </inherited>
+    <GroupHeaderBand Name="GroupHeader1" ZOrder="0" Top="423.8" Width="718.2" Height="37.8" Condition="[Table.InvoiceID]">
+      <TextObject Name="Text5" Width="94.5" Height="18.9" Text="[[Table.InvoiceID]]" Font="Arial, 10pt"/>
+      <DataBand Name="Data1" Top="465.6" Width="718.2" Height="19.28">
+        <TextObject Name="txtQuantity" Left="198.45" Width="103.95" Height="19.28" Text="[Table.Quantity]" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="3" HorzAlign="Right" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="txtPrice" Left="66.15" Width="122.85" Height="19.28" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="3" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="txtItemTotalPrice" Left="9.45" Width="132.3" Height="19.28" Format="Number" Format.UseLocale="false" Format.DecimalDigits="2" Format.DecimalSeparator="." Format.GroupSeparator="," Format.NegativePattern="3" VertAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="Text6" Left="652.05" Width="75.6" Height="18.9" Text="[Table.RowSerialNumberDynamic]" HorzAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="Text1" Left="245.7" Width="113.4" Height="18.9" HorzAlign="Center" Font="Arial, 10pt"/>
+        <TextObject Name="txtItemName" Left="359.1" Width="217.35" Height="19.28" Text="[Table.ItemName]" HorzAlign="Right" VertAlign="Center" WordWrap="false" Font="Arial, 10pt"/>
+        <TextObject Name="Text2" Left="576.45" Width="122.85" Height="19.28" Text="[Table.ItemCode]" HorzAlign="Center" Font="Arial, 10pt"/>
+      </DataBand>
+      <GroupFooterBand Name="GroupFooter1" Top="488.88" Width="718.2" Height="37.8"/>
+    </GroupHeaderBand>
+    <ReportSummaryBand Name="ReportSummary1" ZOrder="-1" Top="530.68" Width="718.2" Height="56.7" AfterDataEvent="ReportSummary1_AfterData">
+      <LineObject Name="Line1" Left="28.35" Width="689.85" Visible="false" Border.ShadowColor="DimGray" Border.Color="DimGray" Diagonal="true"/>
+      <TextObject Name="txtTafiqet" Left="198.45" Top="18.9" Width="472.5" Height="18.9" HorzAlign="Right" Font="Arial, 14.25pt, style=Bold"/>
+      <TextObject Name="Text20" Left="661.5" Top="18.9" Width="56.7" Height="18.9" Text=":Only" HorzAlign="Right" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="lblNetInvoice" Left="519.75" Width="56.7" Height="18.9" Visible="false" Text=": صافي" HorzAlign="Right" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="Text22" Left="453.6" Top="37.8" Width="151.2" Height="18.9" Text=":Received by" HorzAlign="Right" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="Text23" Left="103.95" Top="37.8" Width="122.85" Height="18.9" Text=":Prepared by" HorzAlign="Right" Font="Arial, 12pt, style=Bold" TextFill.Color="DimGray"/>
+    </ReportSummaryBand>
+    <inherited Name="PageFooter1" Top="591.38" Height="75.6">
+      <inherited Name="txtAddress" Height="15.12" Text=""/>
+      <inherited Name="txtAddress1" Top="24.57" Height="15.12" Text=""/>
+      <inherited Name="txtAddressEN" Top="39.69" Height="15.12" Text=""/>
+      <inherited Name="txtAddress1EN" Top="54.81" Height="15.12" Text=""/>
+    </inherited>
+  </inherited>
+</inherited>
